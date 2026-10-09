@@ -1241,6 +1241,348 @@ bank.push(...[
     "focus": "Estude linguagem clara, escuta e verificação da compreensão."
   }
 ]);
+// Ampliação revisada: Q127–Q134 (reteste e combinação de resultados).
+bank.push(...[
+  {
+    "id": "Q127",
+    "version": 1,
+    "title": "Dois positivos, uma atualização por vez",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Atualização após dois positivos",
+    "secondary": [
+      "Atualização após dois positivos",
+      "Independência condicional"
+    ],
+    "difficulty": "Intermediária",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "Uma pessoa tem probabilidade pré-teste de 20%. Um teste hipotético tem sensibilidade de 80% e especificidade de 90% e é realizado duas vezes, com dois positivos. Assuma independência dos resultados entre pessoas com a doença e também entre pessoas sem a doença, com desempenho constante e sem mudança da condição clínica. Qual é a probabilidade após o segundo positivo?",
+    "options": [
+      "66,7%, pois o segundo resultado deve usar novamente a probabilidade inicial.",
+      "Aproximadamente 94,1%, usando a probabilidade após o primeiro teste como ponto de partida do segundo.",
+      "100%, pois dois positivos garantem o diagnóstico.",
+      "40%, pois basta somar duas vezes a probabilidade inicial."
+    ],
+    "correct": 2,
+    "explain": "Sob independência condicional, a probabilidade passa de 20% para 66,7% e depois para 94,1%. Dois positivos não significam certeza.",
+    "feedbackSteps": [
+      "LR+ = 0,80/(1 − 0,90) = 8. Odds iniciais = 0,20/0,80 = 0,25.",
+      "Após o primeiro positivo: odds = 0,25 × 8 = 2; probabilidade = 2/3 = 66,7%.",
+      "Após o segundo: odds = 2 × 8 = 16; probabilidade = 16/17 = 94,1%.",
+      "A multiplicação das LR marginais exige a independência condicional explicitada no enunciado."
+    ],
+    "naturalExplanation": "Cada positivo acrescenta informação no modelo. O segundo começa da suspeita já atualizada, não dos 20% iniciais. Se os erros fossem compartilhados, esse cálculo poderia não representar o ganho real.",
+    "optionReasons": [
+      "Recomeçar dos 20% desconsidera a informação do primeiro exame.",
+      "Correta: atualiza uma vez por resultado e obtém 94,1%.",
+      "Mesmo no modelo independente, ainda existe probabilidade de ausência da doença.",
+      "Probabilidades não se somam dessa forma."
+    ],
+    "tags": [
+      "Reiniciar a pré-teste em cada exame",
+      "Atualizar sequencialmente sob independência",
+      "Tratar dois positivos como certeza",
+      "Somar probabilidades iniciais"
+    ],
+    "focus": "Revise probabilidade → odds → LR → nova probabilidade e a hipótese de independência condicional."
+  },
+  {
+    "id": "Q128",
+    "version": 1,
+    "title": "Um positivo seguido de um negativo",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Resultados discordantes e força das LR",
+    "secondary": [
+      "Resultados discordantes e força das LR",
+      "Independência condicional"
+    ],
+    "difficulty": "Intermediária",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "A probabilidade pré-teste é de 20%. Um exame com sensibilidade de 80% e especificidade de 90% resulta positivo e, na repetição, negativo. Assuma independência condicional, desempenho constante e condição clínica estável. Qual é a interpretação adequada?",
+    "options": [
+      "Os resultados se anulam e a probabilidade retorna obrigatoriamente a 20%.",
+      "O último resultado determina sozinho a probabilidade final de 5,3%.",
+      "A probabilidade final é zero porque houve um negativo.",
+      "A probabilidade final é aproximadamente 30,8%; o negativo reduz a suspeita após o positivo, mas não a devolve necessariamente ao valor inicial."
+    ],
+    "correct": 4,
+    "explain": "A probabilidade vai de 20% para 66,7% após o positivo e para 30,8% após o negativo. Resultados discordantes não se anulam automaticamente.",
+    "feedbackSteps": [
+      "LR+ = 8 e LR− = (1 − 0,80)/0,90 = 2/9.",
+      "Odds iniciais = 0,25. Após o positivo: odds = 2. Após o negativo: odds = 2 × 2/9 = 4/9.",
+      "Probabilidade final = (4/9)/(1 + 4/9) = 4/13 = 30,8%.",
+      "O produto LR+ × LR− = 16/9 não é 1; por isso a probabilidade não retorna a 20%."
+    ],
+    "naturalExplanation": "O positivo aumentou bastante a suspeita. O negativo retirou parte dessa evidência, mas os dois efeitos não tiveram exatamente a mesma força.",
+    "optionReasons": [
+      "Só haveria retorno ao valor inicial se o produto das LR fosse 1, sob esse modelo.",
+      "5,3% usa apenas um negativo a partir dos 20%, descartando o positivo anterior.",
+      "Um negativo não garante risco zero.",
+      "Correta: incorpora os dois resultados e reconhece a força diferente das LR."
+    ],
+    "tags": [
+      "Presumir cancelamento de resultados discordantes",
+      "Usar apenas o último exame",
+      "Tratar negativo como risco zero",
+      "Ponderar resultados discordantes pelas LR"
+    ],
+    "focus": "Estude LR+ e LR−: sinais opostos não significam efeitos iguais."
+  },
+  {
+    "id": "Q129",
+    "version": 1,
+    "title": "Exigir dois positivos",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Combinação em série pela regra E",
+    "secondary": [
+      "Combinação em série pela regra E",
+      "Independência condicional"
+    ],
+    "difficulty": "Básica",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "Dois testes hipotéticos têm os seguintes desempenhos: A, sensibilidade 90% e especificidade 95%; B, sensibilidade 80% e especificidade 90%. A estratégia considera positivo somente quem tiver A positivo E B positivo. Sob independência condicional, quais são a sensibilidade e a especificidade combinadas?",
+    "options": [
+      "Sensibilidade de 72% e especificidade de 99,5%.",
+      "Sensibilidade de 98% e especificidade de 85,5%.",
+      "Sensibilidade de 90% e especificidade de 95%.",
+      "Sensibilidade de 170% e especificidade de 185%."
+    ],
+    "correct": 1,
+    "explain": "Exigir ambos positivos produz sensibilidade de 72% e especificidade de 99,5% no modelo independente: menos falsos positivos, mas mais casos perdidos.",
+    "feedbackSteps": [
+      "Entre doentes, ambos positivos: 0,90 × 0,80 = 0,72, ou 72%.",
+      "Entre não doentes, ambos positivos: 0,05 × 0,10 = 0,005, ou 0,5% de falsos positivos.",
+      "Especificidade combinada = 1 − 0,005 = 99,5%. A regra E exige concordância positiva."
+    ],
+    "naturalExplanation": "Duas barreiras precisam ser ultrapassadas para a estratégia classificar alguém como positivo. Isso reduz alarmes falsos, mas algumas pessoas com a doença falham em uma das etapas.",
+    "optionReasons": [
+      "Correta: aplica a regra E e as probabilidades condicionais independentes.",
+      "Esses são os valores da regra OU para os mesmos testes.",
+      "Ignora o segundo teste.",
+      "Somar percentuais pode produzir valores impossíveis e não calcula a combinação."
+    ],
+    "tags": [
+      "Calcular corretamente combinação pela regra E",
+      "Confundir regra E com regra OU",
+      "Ignorar segundo teste",
+      "Somar sensibilidade e especificidade"
+    ],
+    "focus": "Diferencie regras E e OU e relacione seus efeitos a falsos positivos e negativos."
+  },
+  {
+    "id": "Q130",
+    "version": 1,
+    "title": "Basta um dos testes ser positivo",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Combinação em paralelo pela regra OU",
+    "secondary": [
+      "Combinação em paralelo pela regra OU",
+      "Independência condicional"
+    ],
+    "difficulty": "Básica",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "Os testes A e B têm sensibilidade/especificidade de 90%/95% e 80%/90%, respectivamente. Ambos são realizados, e a estratégia considera positivo quem tiver A positivo OU B positivo, incluindo quem tiver ambos positivos. Sob independência condicional, quais são a sensibilidade e a especificidade combinadas?",
+    "options": [
+      "Sensibilidade de 72% e especificidade de 99,5%.",
+      "Sensibilidade de 85% e especificidade de 92,5%, pela média dos testes.",
+      "Sensibilidade de 98% e especificidade de 85,5%.",
+      "Sensibilidade e especificidade de 100%, porque dois exames eliminam todos os erros."
+    ],
+    "correct": 3,
+    "explain": "A regra OU aumenta a detecção: sensibilidade de 98%. A especificidade fica em 85,5%, pois um positivo em qualquer teste classifica a estratégia como positiva.",
+    "feedbackSteps": [
+      "Entre doentes, ambos negativos: (1 − 0,90) × (1 − 0,80) = 0,02.",
+      "Sensibilidade = 1 − 0,02 = 98%.",
+      "Entre não doentes, ambos negativos: 0,95 × 0,90 = 85,5%; essa é a especificidade da estratégia."
+    ],
+    "naturalExplanation": "Para um caso passar despercebido, os dois testes precisam falhar em detectá-lo. Por outro lado, basta um alarme falso para uma pessoa sem a doença ser classificada como positiva.",
+    "optionReasons": [
+      "Esses são os resultados da regra E.",
+      "A média simples não calcula a estratégia OU.",
+      "Correta: calcula o complemento de ambos negativos entre doentes e ambos negativos entre não doentes.",
+      "Dois testes não eliminam automaticamente os erros."
+    ],
+    "tags": [
+      "Confundir regra OU com regra E",
+      "Calcular combinação por média simples",
+      "Calcular corretamente combinação pela regra OU",
+      "Presumir ausência de erros com dois testes"
+    ],
+    "focus": "Relacione a regra OU à redução de falsos negativos e ao aumento de falsos positivos."
+  },
+  {
+    "id": "Q131",
+    "version": 1,
+    "title": "Uma cópia do resultado não acrescenta evidência",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Repetição perfeitamente dependente",
+    "secondary": [
+      "Repetição perfeitamente dependente",
+      "Independência condicional"
+    ],
+    "difficulty": "Básica",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "A probabilidade pré-teste é de 10%. Um teste com sensibilidade de 90% e especificidade de 90% resulta positivo, levando a probabilidade a 50%. O chamado segundo resultado é apenas uma cópia automática do primeiro laudo, sem nova medição. Qual é a probabilidade após receber essa cópia?",
+    "options": [
+      "90%, multiplicando novamente a LR+ de 9.",
+      "50%, pois a cópia não acrescenta uma observação independente.",
+      "100%, pois existem dois laudos positivos.",
+      "10%, porque a repetição invalida a primeira observação."
+    ],
+    "correct": 2,
+    "explain": "A cópia não contém informação nova. A probabilidade permanece em 50%; aplicar novamente a LR+ contaria a mesma evidência duas vezes.",
+    "feedbackSteps": [
+      "O primeiro positivo já foi incorporado e levou a probabilidade a 50%.",
+      "O segundo laudo é uma cópia determinística: seu conteúdo já era conhecido a partir do primeiro.",
+      "A LR adicional condicionada ao primeiro resultado é 1, não 9. Portanto, não há nova atualização."
+    ],
+    "naturalExplanation": "Receber a mesma informação em dois papéis não equivale a receber duas observações. Esse caso é diferente de realizar uma nova medição, cujo ganho dependeria da relação entre seus erros.",
+    "optionReasons": [
+      "90% é o resultado da multiplicação indevida das LR como se houvesse independência.",
+      "Correta: reconhece que a cópia não adiciona evidência.",
+      "Dois documentos não garantem dois resultados independentes nem certeza.",
+      "A cópia não elimina a informação obtida no primeiro teste."
+    ],
+    "tags": [
+      "Contar novamente evidência dependente",
+      "Reconhecer ausência de informação nova",
+      "Confundir dois laudos com certeza",
+      "Descartar indevidamente o primeiro teste"
+    ],
+    "focus": "Diferencie nova observação, erros dependentes e mera duplicação do resultado."
+  },
+  {
+    "id": "Q132",
+    "version": 1,
+    "title": "Quando conhecemos o desempenho condicionado",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Reteste com dependência informada",
+    "secondary": [
+      "Reteste com dependência informada",
+      "Independência condicional"
+    ],
+    "difficulty": "Avançada",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "Após um teste A positivo, a probabilidade de doença é de 50%. Entre pessoas com A positivo, o teste B resulta positivo em 80% dos doentes e em 60% dos não doentes. B também é positivo. Qual é a probabilidade final, usando esses dados condicionados ao primeiro resultado?",
+    "options": [
+      "80%, igual à positividade de B entre os doentes.",
+      "90%, pois qualquer segundo positivo deve usar LR+ igual a 9.",
+      "50%, pois resultados dependentes nunca fornecem informação adicional.",
+      "Aproximadamente 57,1%, pois a LR de B nesse grupo é 0,80/0,60 = 1,33."
+    ],
+    "correct": 4,
+    "explain": "No grupo com A positivo, a LR adicional de B é 1,33. A probabilidade passa de 50% para 57,1%. Não precisamos presumir independência quando os dados condicionados relevantes estão disponíveis.",
+    "feedbackSteps": [
+      "Após A positivo, as odds são 0,50/0,50 = 1.",
+      "No grupo já selecionado por A, LR de B positivo = P(B+ | doença, A+)/P(B+ | sem doença, A+) = 0,80/0,60 = 4/3.",
+      "Odds finais = 1 × 4/3. Probabilidade = (4/3)/(1 + 4/3) = 4/7 = 57,1%."
+    ],
+    "naturalExplanation": "Imagine cem pessoas com A positivo: cinquenta têm a doença e cinquenta não. B identifica quarenta positivas entre as doentes e trinta entre as não doentes. Entre esses setenta positivos de B, quarenta têm a doença: 57,1%.",
+    "optionReasons": [
+      "80% descreve B entre doentes já positivos em A, não doença entre os positivos de B.",
+      "O enunciado não fornece LR adicional de 9; os dados condicionados dão 1,33.",
+      "Dependência não significa ausência total de informação; o ganho depende da relação entre os resultados.",
+      "Correta: usa a LR condicionada ao resultado anterior."
+    ],
+    "tags": [
+      "Confundir positividade condicional com probabilidade posterior",
+      "Usar LR não fornecida pelo cenário",
+      "Tratar dependência como ausência obrigatória de informação",
+      "Usar desempenho condicionado para atualização"
+    ],
+    "focus": "Estude P(B+ | doença, A+) e P(B+ | sem doença, A+), em vez de reutilizar automaticamente medidas marginais."
+  },
+  {
+    "id": "Q133",
+    "version": 1,
+    "title": "Laboratórios diferentes garantem independência?",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Justificativa da independência condicional",
+    "secondary": [
+      "Justificativa da independência condicional",
+      "Independência condicional"
+    ],
+    "difficulty": "Avançada",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "Uma equipe pretende multiplicar as LR marginais de dois exames realizados em laboratórios diferentes. Ambos dependem do mesmo marcador biológico. Qual informação sustentaria diretamente a independência condicional para combinar os dois resultados positivos?",
+    "options": [
+      "No modelo, saber que A foi positivo não modifica a probabilidade de B positivo, tanto entre doentes quanto entre não doentes.",
+      "Os exames foram realizados em dias diferentes, o que garante independência.",
+      "Os exames têm sensibilidades iguais, o que demonstra independência.",
+      "O segundo laboratório não recebeu o primeiro laudo, o que elimina toda dependência entre os erros."
+    ],
+    "correct": 1,
+    "explain": "A independência deve valer dentro de cada grupo de doença. Laboratórios, datas ou sensibilidades diferentes ou semelhantes não demonstram, sozinhos, essa condição.",
+    "feedbackSteps": [
+      "Independência condicional significa considerar separadamente os grupos com e sem doença.",
+      "Para a combinação positiva: P(B+ | doença, A+) = P(B+ | doença) e P(B+ | sem doença, A+) = P(B+ | sem doença).",
+      "Mesmo com avaliadores separados, fatores biológicos ou interferentes compartilhados podem relacionar os resultados. Estimar essas relações com dados é diferente de presumir independência."
+    ],
+    "naturalExplanation": "Mudar o laboratório não muda necessariamente o que está sendo medido. Um mesmo fator da amostra pode influenciar os dois exames, mesmo sem comunicação entre os profissionais.",
+    "optionReasons": [
+      "Correta: expressa a condição relevante nos dois grupos.",
+      "Datas diferentes não garantem independência e podem envolver mudanças clínicas.",
+      "Sensibilidades iguais não informam se os erros estão relacionados.",
+      "Não conhecer o laudo pode reduzir influência na leitura, mas não elimina dependência biológica ou analítica."
+    ],
+    "tags": [
+      "Definir independência condicional nos dois grupos",
+      "Presumir independência por datas diferentes",
+      "Presumir independência por sensibilidades iguais",
+      "Confundir cegamento com independência dos testes"
+    ],
+    "focus": "Diferencie cegamento dos avaliadores e independência condicional dos resultados."
+  },
+  {
+    "id": "Q134",
+    "version": 1,
+    "title": "A ordem altera o resultado final?",
+    "theme": "Reteste e combinação de resultados",
+    "area": "Reteste e combinação de resultados",
+    "subtheme": "Ordem dos exames no modelo independente",
+    "secondary": [
+      "Ordem dos exames no modelo independente",
+      "Independência condicional"
+    ],
+    "difficulty": "Intermediária",
+    "skill": "Combinar resultados e reconhecer limites do modelo",
+    "text": "A probabilidade inicial é de 20%. O teste A tem sensibilidade de 80% e especificidade de 90%; B tem sensibilidade de 95% e especificidade de 80%. Ambos são positivos. Assuma independência condicional, desempenho constante e nenhuma mudança clínica ou intervenção entre os exames. O que ocorre se a ordem A→B for trocada por B→A?",
+    "options": [
+      "O último teste determina sozinho a probabilidade final.",
+      "A ordem altera necessariamente a probabilidade final, mesmo nesse modelo.",
+      "A probabilidade intermediária muda, mas a final permanece aproximadamente 90,5%, pois o produto das LR é o mesmo.",
+      "A probabilidade final será 100% em qualquer ordem."
+    ],
+    "correct": 3,
+    "explain": "Sob as hipóteses do exercício, a ordem muda a etapa intermediária, mas não o resultado final: aproximadamente 90,5%.",
+    "feedbackSteps": [
+      "LR+ de A = 0,80/0,10 = 8; LR+ de B = 0,95/0,20 = 4,75.",
+      "Odds iniciais = 0,20/0,80 = 0,25. Odds finais = 0,25 × 8 × 4,75 = 9,5.",
+      "Probabilidade final = 9,5/10,5 = 90,5%. A multiplicação produz o mesmo valor nas duas ordens.",
+      "A primeira etapa é 66,7% com A ou 54,3% com B. Fora desse modelo, mudanças clínicas, tratamentos e dependência precisam ser considerados."
+    ],
+    "naturalExplanation": "Somar a evidência de A e B em ordens diferentes leva ao mesmo conjunto de informações no modelo. O caminho intermediário é diferente, mas o ponto final é igual.",
+    "optionReasons": [
+      "Ignora a evidência do primeiro teste.",
+      "Sob as hipóteses dadas, o produto das LR não muda com a ordem.",
+      "Correta: distingue atualização intermediária e probabilidade final.",
+      "O resultado continua inferior a 100%."
+    ],
+    "tags": [
+      "Usar apenas o último resultado",
+      "Presumir efeito de ordem sob modelo fixo",
+      "Reconhecer equivalência final e etapas diferentes",
+      "Tratar dois positivos como certeza"
+    ],
+    "focus": "Estude comutatividade da multiplicação das LR e limites de aplicação na prática."
+  }
+]);
 function personalSummaryHTML(activity){
  if(!activity?.finished)throw new Error('Finalize a atividade antes de exportar.');
  const right=activity.questions.filter(q=>activity.answers[q.id]===q.correct).length,missing=activity.questions.filter(q=>!activity.answers[q.id]).length,wrong=activity.questions.length-right-missing;
@@ -1252,7 +1594,7 @@ function downloadPersonalSummary(){const blob=new Blob([personalSummaryHTML(sess
 function printPersonalSummary(){const report=personalSummaryHTML(session),popup=window.open('','_blank');if(!popup){$('summaryExportState').textContent='O navegador bloqueou a janela de impressão. Permita a abertura ou baixe o resumo e use Imprimir no navegador.';return;}popup.document.open();popup.document.write(report);popup.document.close();popup.focus();setTimeout(()=>{popup.print();},250);$('summaryExportState').textContent='Resumo aberto para impressão. Na janela de impressão, você também pode escolher Salvar como PDF.';}
 const profiles={curso:['Medicina','Enfermagem','Nutrição','Farmácia','Fisioterapia','Outro curso da saúde','Curso de outra área','Não iniciei graduação'],situacao_atual:['Cursando graduação','Graduação concluída','Graduação interrompida','Não curso/não concluí graduação','Outra situação'],periodo_atual:[...Array.from({length:12},(_,i)=>(i+1)+'º período'),'Acima do 12º','Organização anual/outro formato','Não sei informar'],tipo_instituicao_atual:["Pública", "Privada", "Não sei informar", "Prefiro não responder"],preparacao_residencia:['Sim','Não','Não se aplica'],contato_testes_diagnosticos:["Ainda não estudei.", "Estou estudando atualmente na graduação.", "Já estudei na graduação.", "Estudei por conta própria, fora da graduação.", "Estudei na graduação e também por conta própria.", "Não sei informar.", "Não se aplica."]};
 const labels={curso:'Curso de graduação atual ou concluído',situacao_atual:'Situação atual',periodo_atual:'Período atual',preparacao_residencia:'Está se preparando para residência médica?',tipo_instituicao_atual:'Sua instituição de graduação atual é:',contato_testes_diagnosticos:'Como foi seu contato com o conteúdo de testes diagnósticos?'};
-$('learn').innerHTML=`<div class="panel"><h2>Questões de testes diagnósticos</h2><p>Banco de 126 questões com cenários e parâmetros hipotéticos. O teste geral sorteia 10 questões sem repetição: 5 básicas, 3 intermediárias e 2 avançadas, distribuídas por seis eixos de conteúdo. No estudo por tema, são sorteadas até 10 questões do tema escolhido, conforme a quantidade disponível, com as dificuldades existentes nesse tema. A dificuldade é uma classificação pedagógica inicial, ainda não calibrada pelo desempenho dos alunos. A ordem das questões e das alternativas muda a cada nova atividade.</p><div id="quizSetup"><h3>Antes de começar</h3><p>Preencha os campos obrigatórios. Seu perfil e suas respostas serão registrados para acompanhamento pedagógico pela docente. Esses dados serão usados para identificar os temas com maior dificuldade e analisar as taxas de acertos e erros de cada questão, ajudando a revisar as questões e melhorar as explicações e atividades.</p><p>O envio das respostas é obrigatório ao finalizar. Não solicitamos nome, e-mail ou matrícula. Os registros usam um código aleatório e ficam em uma planilha privada, acessível apenas à docente. Não inclua dados pessoais nos comentários.</p><form id="profileForm">${Object.keys(profiles).map(k=>`<div id="wrap_${k}"><label for="profile_${k}">${labels[k]} *</label><select id="profile_${k}" name="${k}" required style="max-width:100%;width:100%"><option value="">Selecione</option>${profiles[k].map(v=>`<option>${escapeHTML(v)}</option>`).join('')}</select></div>`).join('')}<p class="muted">Sobre seu contato com o conteúdo, escolha uma única alternativa. Se estiver estudando na graduação e também por conta própria, selecione a opção que contempla as duas formas.</p><label for="activityScope">Conteúdo da atividade</label><select id="activityScope" style="width:100%"><option value="general">Teste geral · sorteio equilibrado</option><option value="theme">Estudo por tema</option></select><div id="themeChoice" class="hidden"><label for="studyTheme">Tema que deseja estudar *</label><select id="studyTheme" style="width:100%" disabled><option value="">Selecione um tema</option>${[...new Set(bank.map(q=>q.theme))].sort((a,b)=>a.localeCompare(b,'pt-BR')).map(theme=>`<option value="${escapeHTML(theme)}">${escapeHTML(theme)} · ${bank.filter(q=>q.theme===theme).length} questão(ões)</option>`).join('')}</select><p id="themeCount" class="muted" aria-live="polite">Escolha um tema. A atividade terá até 10 questões sem repetição e gerará um novo registro na base privada.</p></div><label for="quizMode">Modo da atividade</label><select id="quizMode"><option value="study">Estudo · feedback após confirmar cada resposta</option><option value="exam">Simulado · correção ao finalizar</option></select><button type="submit" class="active">Iniciar atividade</button></form></div><div id="quizWork" class="hidden"></div><div id="quizSummary" class="hidden" aria-live="polite"></div></div><iframe name="epiclinReceiver" id="epiclinReceiver" title="Recebimento dos resultados" style="display:none"></iframe><form id="sendForm" method="POST" target="epiclinReceiver" style="display:none"><input type="hidden" name="payload" id="sendPayload"><input type="hidden" name="formato" value="html"></form>`;
+$('learn').innerHTML=`<div class="panel"><h2>Questões de testes diagnósticos</h2><p>Banco de 134 questões com cenários e parâmetros hipotéticos. O teste geral sorteia 10 questões sem repetição: 5 básicas, 3 intermediárias e 2 avançadas, distribuídas por seis eixos de conteúdo. No estudo por tema, são sorteadas até 10 questões do tema escolhido, conforme a quantidade disponível, com as dificuldades existentes nesse tema. A dificuldade é uma classificação pedagógica inicial, ainda não calibrada pelo desempenho dos alunos. A ordem das questões e das alternativas muda a cada nova atividade.</p><div id="quizSetup"><h3>Antes de começar</h3><p>Preencha os campos obrigatórios. Seu perfil e suas respostas serão registrados para acompanhamento pedagógico pela docente. Esses dados serão usados para identificar os temas com maior dificuldade e analisar as taxas de acertos e erros de cada questão, ajudando a revisar as questões e melhorar as explicações e atividades.</p><p>O envio das respostas é obrigatório ao finalizar. Não solicitamos nome, e-mail ou matrícula. Os registros usam um código aleatório e ficam em uma planilha privada, acessível apenas à docente. Não inclua dados pessoais nos comentários.</p><form id="profileForm">${Object.keys(profiles).map(k=>`<div id="wrap_${k}"><label for="profile_${k}">${labels[k]} *</label><select id="profile_${k}" name="${k}" required style="max-width:100%;width:100%"><option value="">Selecione</option>${profiles[k].map(v=>`<option>${escapeHTML(v)}</option>`).join('')}</select></div>`).join('')}<p class="muted">Sobre seu contato com o conteúdo, escolha uma única alternativa. Se estiver estudando na graduação e também por conta própria, selecione a opção que contempla as duas formas.</p><label for="activityScope">Conteúdo da atividade</label><select id="activityScope" style="width:100%"><option value="general">Teste geral · sorteio equilibrado</option><option value="theme">Estudo por tema</option></select><div id="themeChoice" class="hidden"><label for="studyTheme">Tema que deseja estudar *</label><select id="studyTheme" style="width:100%" disabled><option value="">Selecione um tema</option>${[...new Set(bank.map(q=>q.theme))].sort((a,b)=>a.localeCompare(b,'pt-BR')).map(theme=>`<option value="${escapeHTML(theme)}">${escapeHTML(theme)} · ${bank.filter(q=>q.theme===theme).length} questão(ões)</option>`).join('')}</select><p id="themeCount" class="muted" aria-live="polite">Escolha um tema. A atividade terá até 10 questões sem repetição e gerará um novo registro na base privada.</p></div><label for="quizMode">Modo da atividade</label><select id="quizMode"><option value="study">Estudo · feedback após confirmar cada resposta</option><option value="exam">Simulado · correção ao finalizar</option></select><button type="submit" class="active">Iniciar atividade</button></form></div><div id="quizWork" class="hidden"></div><div id="quizSummary" class="hidden" aria-live="polite"></div></div><iframe name="epiclinReceiver" id="epiclinReceiver" title="Recebimento dos resultados" style="display:none"></iframe><form id="sendForm" method="POST" target="epiclinReceiver" style="display:none"><input type="hidden" name="payload" id="sendPayload"><input type="hidden" name="formato" value="html"></form>`;
 function periodVisibility(){const show=$('profile_situacao_atual').value==='Cursando graduação';for(const key of ['periodo_atual','tipo_instituicao_atual']){$('wrap_'+key).classList.toggle('hidden',!show);const field=$('profile_'+key);field.required=show;field.disabled=!show;if(!show)field.value=''}}$('profile_situacao_atual').onchange=periodVisibility;periodVisibility();
 function selectThemeQuestions(theme){return shuffled(bank.filter(q=>q.theme===theme)).slice(0,10);}
 function themeVisibility(){const show=$('activityScope').value==='theme';$('themeChoice').classList.toggle('hidden',!show);$('studyTheme').disabled=!show;$('studyTheme').required=show;}
