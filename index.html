@@ -159,6 +159,1088 @@ function targetedReview(activity){let themes=priorityThemes(activity),eligible=b
 bank.push(...[{"id": "Q055", "version": 1, "theme": "Matriz 2 × 2", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Um programa aplica um teste em 10.000 pessoas. A prevalência da condição é de 0,5%, a sensibilidade é de 80% e a especificidade é de 98%. Quais são as contagens esperadas?", "options": ["VP = 40; FN = 10; FP = 199; VN = 9.751.", "VP = 40; FN = 10; FP = 200; VN = 9.750.", "VP = 50; FN = 0; FP = 199; VN = 9.751.", "VP = 80; FN = 20; FP = 198; VN = 9.702."], "correct": 1, "explain": "Há 50 pessoas com a condição e 9.950 sem ela. Os FP são 2% de 9.950, não da população inteira.", "tags": ["Reconstruir a matriz corretamente", "Aplicar taxa de FP à população total", "Ignorar falsos negativos", "Aplicar sensibilidade sem definir os doentes"], "focus": "Revise matriz 2 × 2. Há 50 pessoas com a condição e 9.950 sem ela. Os FP são 2% de 9.950, não da população inteira."}, {"id": "Q056", "version": 1, "theme": "Sensibilidade e especificidade", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Um estudo encontrou VP = 84, FN = 36, FP = 44 e VN = 836. Quais são a sensibilidade e a especificidade?", "options": ["65,6% e 95,9%.", "70% e 95%.", "84% e 83,6%.", "95% e 70%."], "correct": 2, "explain": "Sensibilidade = 84/120 = 70%. Especificidade = 836/880 = 95%. A primeira alternativa usa os denominadores dos valores preditivos.", "tags": ["Confundir valores preditivos com desempenho", "Selecionar denominadores corretos", "Usar escala ou denominador incorreto", "Inverter sensibilidade e especificidade"], "focus": "Revise sensibilidade e especificidade. Sensibilidade = 84/120 = 70%. Especificidade = 836/880 = 95%. A primeira alternativa usa os denominadores dos valores preditivos."}, {"id": "Q057", "version": 1, "theme": "Sensibilidade", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Um teste identificou 120 verdadeiros positivos e apresentou sensibilidade de 80%. Quantos falsos negativos havia?", "options": ["24.", "96.", "30.", "150."], "correct": 3, "explain": "Se 120 representam 80% dos doentes, o total é 150. FN = 150 − 120 = 30. Calcular 20% apenas sobre os VP usa o denominador errado.", "tags": ["Aplicar complemento aos VP", "Multiplicar VP pela sensibilidade", "Recuperar total de doentes", "Confundir total de doentes com FN"], "focus": "Revise sensibilidade. Se 120 representam 80% dos doentes, o total é 150. FN = 150 − 120 = 30. Calcular 20% apenas sobre os VP usa o denominador errado."}, {"id": "Q058", "version": 1, "theme": "Especificidade", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Entre 750 participantes sem a condição, um teste apresentou especificidade de 96%. Quantos resultados positivos eram esperados nesse grupo?", "options": ["720.", "4.", "28,8.", "30."], "correct": 4, "explain": "A taxa de FP é 4%. FP = 0,04 × 750 = 30. Os 720 restantes são VN.", "tags": ["Confundir VN e FP", "Interpretar percentual como contagem", "Aplicar taxa de FP apenas aos VN", "Calcular falsos positivos"], "focus": "Revise especificidade. A taxa de FP é 4%. FP = 0,04 × 750 = 30. Os 720 restantes são VN."}, {"id": "Q059", "version": 1, "theme": "Integração dos indicadores", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Em 1.000 participantes, foram observados VP = 80, FN = 20, FP = 45 e VN = 855. Qual alternativa está correta?", "options": ["Prevalência = 12,5%; positividade = 10%; acurácia = 93,5%.", "Prevalência = 10%; positividade = 12,5%; acurácia = 93,5%.", "Prevalência = 8%; positividade = 12,5%; acurácia = 85,5%.", "Prevalência = 10%; positividade = 10%; acurácia = 80%."], "correct": 2, "explain": "Prevalência = (VP + FN)/N; positividade = (VP + FP)/N; acurácia = (VP + VN)/N. Cada medida reúne células diferentes.", "tags": ["Inverter prevalência e positividade", "Distinguir três indicadores", "Contar apenas VP ou VN", "Confundir sensibilidade com acurácia"], "focus": "Revise integração dos indicadores. Prevalência = (VP + FN)/N; positividade = (VP + FP)/N; acurácia = (VP + VN)/N. Cada medida reúne células diferentes."}, {"id": "Q060", "version": 1, "theme": "Matriz 2 × 2", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Para N = 5.000, prevalência de 4%, sensibilidade de 75% e especificidade de 96%, uma planilha apresenta VP = 150, FN = 50, FP = 200 e VN = 4.600. Qual correção é necessária?", "options": ["VP deve ser 200.", "FN deve ser 25.", "FP deve ser 192 e VN deve ser 4.608.", "A matriz está correta."], "correct": 3, "explain": "Há 4.800 pessoas sem a condição. FP = 4% de 4.800 = 192. A planilha aplicou essa taxa à população total.", "tags": ["Ignorar sensibilidade", "Calcular FN com denominador errado", "Corrigir denominador da especificidade", "Aceitar taxa aplicada à população total"], "focus": "Revise matriz 2 × 2. Há 4.800 pessoas sem a condição. FP = 4% de 4.800 = 192. A planilha aplicou essa taxa à população total."}, {"id": "Q061", "version": 1, "theme": "Denominadores", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Uma matriz contém VP = 90, FN = 10, FP = 90 e VN = 810. Qual interpretação de FN/(VP + FN) está correta?", "options": ["10% dos participantes com a condição tiveram resultado negativo.", "10% dos resultados negativos pertencem a pessoas com a condição.", "10% de todos os participantes são falsos negativos.", "10% dos participantes sem a condição tiveram resultado negativo."], "correct": 1, "explain": "O denominador contém todos os doentes. Entre os negativos, a proporção de doentes seria 10/820; na população inteira, 10/1.000.", "tags": ["Interpretar taxa de FN", "Confundir taxa de FN e complemento do VPN", "Usar população total", "Trocar presença e ausência da condição"], "focus": "Revise denominadores. O denominador contém todos os doentes. Entre os negativos, a proporção de doentes seria 10/820; na população inteira, 10/1.000."}, {"id": "Q062", "version": 1, "theme": "Contagens esperadas", "secondary": ["Matriz e desempenho"], "area": "Matriz e desempenho", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Uma simulação com N = 2.000, prevalência de 1,5%, sensibilidade de 85% e especificidade de 97% gera VP = 25,5, FN = 4,5, FP = 59,1 e VN = 1.910,9. Como apresentar os resultados?", "options": ["Arredondar FN para zero por ser uma contagem pequena.", "Rejeitar a simulação porque pessoas não podem ser fracionárias.", "Arredondar cada célula antes de calcular qualquer indicador.", "Manter as contagens esperadas nos cálculos e arredondar apenas a apresentação final."], "correct": 4, "explain": "As células expressam expectativas, não pessoas observadas. Arredondamentos intermediários podem alterar a matriz e os indicadores.", "tags": ["Eliminar FN por arredondamento", "Confundir expectativa com observação", "Arredondar prematuramente", "Preservar precisão intermediária"], "focus": "Revise contagens esperadas. As células expressam expectativas, não pessoas observadas. Arredondamentos intermediários podem alterar a matriz e os indicadores."}, {"id": "Q063", "version": 1, "theme": "Valor preditivo positivo", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Em 10.000 pessoas, a prevalência é de 0,2%. Um teste tem sensibilidade de 95% e especificidade de 99%. Qual é o VPP aproximado?", "options": ["95%.", "99%.", "16%.", "0,2%."], "correct": 3, "explain": "VP = 19 e FP = 99,8. VPP = 19/118,8 ≈ 16%. Uma pequena taxa de FP pode gerar muitos positivos sem a condição quando ela é rara.", "tags": ["Confundir sensibilidade e VPP", "Confundir especificidade e VPP", "Integrar prevalência e desempenho", "Ignorar atualização após positivo"], "focus": "Revise valor preditivo positivo. VP = 19 e FP = 99,8. VPP = 19/118,8 ≈ 16%. Uma pequena taxa de FP pode gerar muitos positivos sem a condição quando ela é rara."}, {"id": "Q064", "version": 1, "theme": "Valor preditivo positivo", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Um teste tem sensibilidade de 99,7% e especificidade de 99,8%. Com prevalência de 0,5%, qual interpretação quantitativa está correta?", "options": ["O VPP é necessariamente inferior a 10%.", "O VPP é aproximadamente 71,5%.", "O VPP é 99,7%, igual à sensibilidade.", "Não existem FP porque a especificidade é muito alta."], "correct": 2, "explain": "Em 10.000 pessoas, VP = 49,85 e FP = 19,9. VPP = 49,85/69,75 ≈ 71,5%. Prevalência baixa não determina sozinha um VPP específico.", "tags": ["Generalizar baixo VPP", "Calcular VPP com todos os parâmetros", "Confundir sensibilidade e VPP", "Presumir especificidade perfeita"], "focus": "Revise valor preditivo positivo. Em 10.000 pessoas, VP = 49,85 e FP = 19,9. VPP = 49,85/69,75 ≈ 71,5%. Prevalência baixa não determina sozinha um VPP específico."}, {"id": "Q065", "version": 1, "theme": "Probabilidade após resultado negativo", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Entre 1.000 resultados negativos, 940 pertencem a pessoas sem a condição e 60 a pessoas com a condição. Qual afirmação está correta?", "options": ["VPN = 94%; probabilidade da condição após negativo = 6%.", "VPN = 6%; probabilidade da condição após negativo = 94%.", "Sensibilidade = 94%; probabilidade após negativo = zero.", "Especificidade = 94%; VPN = 100%."], "correct": 1, "explain": "VPN descreve ausência da condição entre negativos. A probabilidade de presença nesse grupo é seu complemento.", "tags": ["Interpretar VPN e complemento", "Inverter presença e ausência", "Confundir VPN com sensibilidade e certeza", "Confundir VPN com especificidade"], "focus": "Revise probabilidade após resultado negativo. VPN descreve ausência da condição entre negativos. A probabilidade de presença nesse grupo é seu complemento."}, {"id": "Q066", "version": 1, "theme": "Prevalência e valores preditivos", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Um teste com sensibilidade de 80% e especificidade de 90% é aplicado em duas populações: prevalências de 1% e 10%. Qual comparação do VPP está correta?", "options": ["80% nas duas populações.", "Aproximadamente 47,1% e 7,5%, respectivamente.", "1% e 10%, respectivamente.", "Aproximadamente 7,5% e 47,1%, respectivamente."], "correct": 4, "explain": "Com desempenho fixo, maior prevalência aumenta a proporção de VP entre positivos. VPP = 0,008/0,107 e 0,08/0,17.", "tags": ["Confundir sensibilidade e VPP", "Inverter efeito da prevalência", "Confundir prevalência e VPP", "Comparar VPP em duas populações"], "focus": "Revise prevalência e valores preditivos. Com desempenho fixo, maior prevalência aumenta a proporção de VP entre positivos. VPP = 0,008/0,107 e 0,08/0,17."}, {"id": "Q067", "version": 1, "theme": "Valor preditivo negativo", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Em 10.000 pessoas, prevalência de 5%, sensibilidade de 90% e especificidade de 98% produzem 50 FN e 9.310 VN. Qual interpretação é correta?", "options": ["O VPN alto comprova que não houve casos perdidos.", "VPN ≈ 99,47%, coexistindo com 50 FN esperados.", "A sensibilidade é 99,47%.", "A probabilidade após negativo é 10%."], "correct": 2, "explain": "VPN = 9.310/9.360. Uma alta proporção de negativos sem a condição pode coexistir com um número relevante de casos perdidos.", "tags": ["Presumir ausência de FN", "Distinguir contagens e VPN", "Confundir VPN e sensibilidade", "Usar complemento da sensibilidade como pós-teste"], "focus": "Revise valor preditivo negativo. VPN = 9.310/9.360. Uma alta proporção de negativos sem a condição pode coexistir com um número relevante de casos perdidos."}, {"id": "Q068", "version": 1, "theme": "Valor preditivo positivo", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Um relatório informa apenas que houve 500 resultados positivos e VPP de 20%. O que pode ser determinado?", "options": ["A especificidade é 80%.", "A sensibilidade é 20%.", "Houve 100 VP e 400 FP; a especificidade ainda não pode ser calculada.", "A prevalência é 20%."], "correct": 3, "explain": "O VPP permite dividir os positivos em VP e FP. Para especificidade também precisamos dos VN, isto é, do total sem a condição.", "tags": ["Confundir complemento do VPP com especificidade", "Confundir VPP e sensibilidade", "Reconhecer dados disponíveis", "Confundir VPP e prevalência"], "focus": "Revise valor preditivo positivo. O VPP permite dividir os positivos em VP e FP. Para especificidade também precisamos dos VN, isto é, do total sem a condição."}, {"id": "Q069", "version": 1, "theme": "Relações entre indicadores", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Um teste tem sensibilidade de 90% e especificidade de 98%. Em qual prevalência o VPP será de 50%?", "options": ["Aproximadamente 2,17%.", "50%.", "90%.", "2%."], "correct": 1, "explain": "VPP de 50% significa VP = FP. Assim, 0,90p = 0,02(1 − p), resultando em p = 0,02/0,92 ≈ 2,17%.", "tags": ["Resolver igualdade entre VP e FP", "Igualar VPP e prevalência", "Igualar sensibilidade e prevalência", "Usar taxa de FP como prevalência"], "focus": "Revise relações entre indicadores. VPP de 50% significa VP = FP. Assim, 0,90p = 0,02(1 − p), resultando em p = 0,02/0,92 ≈ 2,17%."}, {"id": "Q070", "version": 1, "theme": "Valor preditivo positivo", "secondary": ["Valores preditivos"], "area": "Valores preditivos", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Na mesma população, Alfa tem sensibilidade de 95% e especificidade de 90%; Beta, 80% e 99%. Para uma prevalência entre 0% e 100%, qual produz maior VPP?", "options": ["Alfa, porque tem maior sensibilidade.", "Ambos, porque a prevalência é igual.", "Não é possível comparar sem conhecer N.", "Beta, porque sua LR+ é 80, enquanto a de Alfa é 9,5."], "correct": 4, "explain": "Para a mesma pré-teste, a maior LR+ produz maior pós-teste positivo. Beta tem menor sensibilidade, portanto não é superior para todos os objetivos.", "tags": ["Comparar somente sensibilidade", "Ignorar desempenho diferente", "Exigir tamanho populacional", "Comparar força da evidência positiva"], "focus": "Revise valor preditivo positivo. Para a mesma pré-teste, a maior LR+ produz maior pós-teste positivo. Beta tem menor sensibilidade, portanto não é superior para todos os objetivos."}, {"id": "Q071", "version": 1, "theme": "Probabilidade pós-teste", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "A probabilidade pré-teste é de 5%. Um resultado positivo tem LR+ = 8. Qual é a probabilidade pós-teste aproximada?", "options": ["40%.", "29,6%.", "8%.", "95%."], "correct": 2, "explain": "Odds iniciais = 0,05/0,95. Multiplicando por 8 e convertendo, obtemos 29,6%. Multiplicar diretamente 5% por 8 é incorreto.", "tags": ["Multiplicar probabilidade pela LR", "Atualizar odds e converter", "Interpretar LR como percentual", "Usar complemento da pré-teste"], "focus": "Revise probabilidade pós-teste. Odds iniciais = 0,05/0,95. Multiplicando por 8 e convertendo, obtemos 29,6%. Multiplicar diretamente 5% por 8 é incorreto."}, {"id": "Q072", "version": 1, "theme": "Probabilidade após resultado negativo", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "A probabilidade pré-teste é de 40% e o resultado negativo apresenta LR− = 0,1. Qual é a probabilidade da condição após o teste?", "options": ["4%.", "10%.", "6,25%.", "Zero."], "correct": 3, "explain": "Odds iniciais = 0,40/0,60 = 2/3. Odds finais = 1/15; probabilidade = 1/16 = 6,25%.", "tags": ["Multiplicar probabilidade pela LR", "Interpretar LR como percentual", "Atualizar negativo corretamente", "Presumir exclusão absoluta"], "focus": "Revise probabilidade após resultado negativo. Odds iniciais = 0,40/0,60 = 2/3. Odds finais = 1/15; probabilidade = 1/16 = 6,25%."}, {"id": "Q073", "version": 1, "theme": "Razão de verossimilhança", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Após um resultado positivo, a probabilidade sobe de 20% para 60%. Qual LR+ produziria essa atualização?", "options": ["3.", "0,4.", "1,5.", "6."], "correct": 4, "explain": "A LR multiplica as odds, não diretamente a probabilidade. Antes do teste: odds = 0,20/0,80 = 0,25. Após o teste: odds = 0,60/0,40 = 1,5. Como odds pós-teste = odds pré-teste × LR+, recuperamos LR+ = 1,5/0,25 = 6. Dividir 60% por 20% dá 3: a probabilidade triplicou, mas as odds aumentaram seis vezes. É esse fator que corresponde à LR+.", "tags": ["Dividir probabilidades em vez de odds", "Interpretar diferença absoluta como LR", "Confundir odds finais com LR", "Recuperar LR pela razão das odds"], "focus": "Revise razão de verossimilhança. A LR multiplica as odds, não diretamente a probabilidade. Antes do teste: odds = 0,20/0,80 = 0,25. Após o teste: odds = 0,60/0,40 = 1,5. Como odds pós-teste = odds pré-teste × LR+, recuperamos LR+ = 1,5/0,25 = 6. Dividir 60% por 20% dá 3: a probabilidade triplicou, mas as odds aumentaram seis vezes. É esse fator que corresponde à LR+."}, {"id": "Q074", "version": 1, "theme": "Razão de verossimilhança", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Um negativo reduz a probabilidade de 50% para 10%. Qual é a LR− correspondente?", "options": ["Aproximadamente 0,111.", "0,2.", "0,5.", "9."], "correct": 1, "explain": "Odds iniciais = 1; finais = 0,10/0,90 = 1/9. LR− = 1/9. Dividir as probabilidades daria 0,2, mas essa razão não corresponde à LR.", "tags": ["Recuperar LR negativa", "Dividir probabilidades", "Usar pré-teste como LR", "Inverter razão das odds"], "focus": "Revise razão de verossimilhança. Odds iniciais = 1; finais = 0,10/0,90 = 1/9. LR− = 1/9. Dividir as probabilidades daria 0,2, mas essa razão não corresponde à LR."}, {"id": "Q075", "version": 1, "theme": "Razão de verossimilhança", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Um teste tem sensibilidade de 60% e especificidade de 50%. Com pré-teste de 20%, qual é a probabilidade após positivo?", "options": ["60%.", "Aproximadamente 23,1%.", "50%.", "24%."], "correct": 2, "explain": "LR+ = 0,60/0,50 = 1,2. Odds iniciais = 0,25; finais = 0,30. Probabilidade = 0,30/1,30 ≈ 23,1%. O resultado acrescenta pouca evidência.", "tags": ["Confundir sensibilidade e VPP", "Interpretar LR próxima de um", "Confundir especificidade e VPP", "Multiplicar probabilidade pela LR"], "focus": "Revise razão de verossimilhança. LR+ = 0,60/0,50 = 1,2. Odds iniciais = 0,25; finais = 0,30. Probabilidade = 0,30/1,30 ≈ 23,1%. O resultado acrescenta pouca evidência."}, {"id": "Q076", "version": 1, "theme": "Interpretação da razão de verossimilhança", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Um teste apresenta LR+ = 5. Qual explicação é correta?", "options": ["Um positivo significa 5% de probabilidade da condição.", "A probabilidade pós-teste é sempre cinco vezes a pré-teste.", "O resultado positivo é cinco vezes mais provável entre pessoas com a condição do que entre aquelas sem ela.", "Cinco em cada dez positivos são verdadeiros."], "correct": 3, "explain": "LR compara probabilidades do resultado nos dois grupos de referência. Na atualização bayesiana ela multiplica as odds pré-teste.", "tags": ["Confundir LR e percentual", "Multiplicar diretamente a probabilidade", "Definir LR positiva", "Confundir LR e VPP"], "focus": "Revise interpretação da razão de verossimilhança. LR compara probabilidades do resultado nos dois grupos de referência. Na atualização bayesiana ela multiplica as odds pré-teste."}, {"id": "Q077", "version": 1, "theme": "Interpretação da razão de verossimilhança", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "A probabilidade de resultado negativo é de 10% entre doentes e de 80% entre não doentes. Qual é a LR−?", "options": ["0,8.", "8.", "0,7.", "0,125."], "correct": 4, "explain": "LR− = P(negativo dado condição)/P(negativo dado ausência) = 0,10/0,80 = 0,125. A ordem da divisão importa.", "tags": ["Usar especificidade como LR", "Inverter razão", "Subtrair probabilidades", "Calcular razão dos resultados negativos"], "focus": "Revise interpretação da razão de verossimilhança. LR− = P(negativo dado condição)/P(negativo dado ausência) = 0,10/0,80 = 0,125. A ordem da divisão importa."}, {"id": "Q078", "version": 1, "theme": "Probabilidade pré-teste", "secondary": ["Bayes e razões de verossimilhança"], "area": "Bayes e razões de verossimilhança", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Dois pacientes chegam a uma probabilidade pós-teste de 50%. O primeiro tinha pré-teste de 10%; o segundo, de 20%. Quais LR positivas produziriam esses resultados?", "options": ["9 para o primeiro e 4 para o segundo.", "5 para o primeiro e 2,5 para o segundo.", "4 para o primeiro e 9 para o segundo.", "1 para ambos."], "correct": 1, "explain": "Pós-teste de 50% corresponde a odds de 1. Odds iniciais = 1/9 e 1/4; LR necessárias = 9 e 4.", "tags": ["Relacionar pré-teste e evidência necessária", "Dividir probabilidades", "Inverter força necessária", "Ignorar atualização"], "focus": "Revise probabilidade pré-teste. Pós-teste de 50% corresponde a odds de 1. Odds iniciais = 1/9 e 1/4; LR necessárias = 9 e 4."}, {"id": "Q079", "version": 1, "theme": "Testagem sequencial", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Pré-teste de 10%. O primeiro resultado positivo tem LR+ = 4; o segundo positivo, LR+ = 5. Sob independência condicional, qual é a probabilidade final?", "options": ["50%.", "90%.", "Aproximadamente 69%.", "20%."], "correct": 3, "explain": "Odds finais = (1/9) × 4 × 5 = 20/9. Probabilidade = 20/29 ≈ 69%.", "tags": ["Contar dois positivos como cinquenta por cento", "Presumir resultado de outro cenário", "Combinar LR corretamente", "Multiplicar probabilidade por LR conjuntas"], "focus": "Revise testagem sequencial. Odds finais = (1/9) × 4 × 5 = 20/9. Probabilidade = 20/29 ≈ 69%."}, {"id": "Q080", "version": 1, "theme": "Testagem sequencial", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Pré-teste de 25%. O primeiro negativo tem LR− = 0,2; o segundo, LR− = 0,5. Sob independência condicional, qual é a probabilidade final?", "options": ["Aproximadamente 3,23%.", "2,5%.", "10%.", "Zero."], "correct": 1, "explain": "Odds iniciais = 1/3; finais = (1/3) × 0,2 × 0,5 = 1/30. Probabilidade = 1/31 ≈ 3,23%.", "tags": ["Combinar negativos por odds", "Multiplicar diretamente probabilidade", "Interpretar produto das LR como percentual", "Presumir certeza"], "focus": "Revise testagem sequencial. Odds iniciais = 1/3; finais = (1/3) × 0,2 × 0,5 = 1/30. Probabilidade = 1/31 ≈ 3,23%."}, {"id": "Q081", "version": 1, "theme": "Resultados discordantes", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Pré-teste de 20%. Primeiro resultado positivo com LR+ = 10; depois, negativo com LR− = 0,2. Sob independência condicional, qual é a probabilidade final?", "options": ["20%, pois resultados discordantes se anulam.", "4%, pois o último resultado é negativo.", "50%, pois houve um positivo e um negativo.", "Aproximadamente 33,3%, pois o produto das LR é 2."], "correct": 4, "explain": "Odds iniciais = 0,25; finais = 0,50. O negativo reduz a probabilidade após o primeiro positivo, mas não desfaz todo o aumento.", "tags": ["Presumir cancelamento universal", "Ignorar primeiro resultado", "Contar sinais sem ponderar evidência", "Reconhecer aumento líquido"], "focus": "Revise resultados discordantes. Odds iniciais = 0,25; finais = 0,50. O negativo reduz a probabilidade após o primeiro positivo, mas não desfaz todo o aumento."}, {"id": "Q082", "version": 1, "theme": "Resultados discordantes", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Intermediária", "skill": "Aplicar e interpretar indicadores", "text": "Pré-teste de 20%. O primeiro negativo tem LR− = 0,1; o segundo positivo, LR+ = 3. Sob independência condicional, qual é a probabilidade final?", "options": ["20%.", "Aproximadamente 7%.", "60%.", "30%."], "correct": 2, "explain": "Produto das LR = 0,3. Odds finais = 0,075; probabilidade = 0,075/1,075 ≈ 7%. O positivo aumenta a etapa anterior, mas a probabilidade permanece abaixo da inicial.", "tags": ["Presumir cancelamento", "Reconhecer redução líquida", "Usar só último resultado e multiplicar probabilidade", "Tratar produto da LR como probabilidade"], "focus": "Revise resultados discordantes. Produto das LR = 0,3. Odds finais = 0,075; probabilidade = 0,075/1,075 ≈ 7%. O positivo aumenta a etapa anterior, mas a probabilidade permanece abaixo da inicial."}, {"id": "Q083", "version": 1, "theme": "Testagem sequencial", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Em um modelo com testes informativos, ambos apresentam LR− menor que 1. Qual afirmação é correta?", "options": ["Cada negativo reduz as odds em relação à etapa anterior.", "Dois negativos sempre produzem probabilidade zero.", "Cada negativo reduz a probabilidade pelo mesmo número de pontos percentuais.", "O segundo negativo dispensa a probabilidade pré-teste."], "correct": 1, "explain": "Sob o modelo de atualização sequencial, multiplicar odds positivas por uma LR entre 0 e 1 as reduz. A redução em pontos percentuais depende do ponto de partida e da LR.", "tags": ["Interpretar redução multiplicativa", "Presumir certeza", "Supor redução absoluta fixa", "Ignorar ponto de partida"], "focus": "Revise testagem sequencial. Sob o modelo de atualização sequencial, multiplicar odds positivas por uma LR entre 0 e 1 as reduz. A redução em pontos percentuais depende do ponto de partida e da LR."}, {"id": "Q084", "version": 1, "theme": "Independência condicional", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Dois testes têm, cada um, taxa de FP de 10%. Sob independência entre não doentes, a frequência esperada de dois positivos seria 1%. Um estudo encontra 8% de dois positivos nesse grupo. Qual interpretação é adequada?", "options": ["A especificidade de cada teste passa automaticamente a 92%.", "O estudo comprova independência entre os resultados.", "A frequência conjunta é incompatível com o produto marginal informado e sugere dependência entre os erros.", "Dois positivos têm necessariamente VPP de 92%."], "correct": 3, "explain": "Sob independência, 0,10 × 0,10 = 0,01. A frequência conjunta de 0,08 indica que o produto marginal não representa esses dados.", "tags": ["Confundir desempenho marginal e conjunto", "Ignorar discrepância conjunta", "Reconhecer dependência de erros", "Inferir VPP sem prevalência"], "focus": "Revise independência condicional. Sob independência, 0,10 × 0,10 = 0,01. A frequência conjunta de 0,08 indica que o produto marginal não representa esses dados."}, {"id": "Q085", "version": 1, "theme": "Dependência entre testes", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Avançada", "skill": "Aplicar e interpretar indicadores", "text": "Após um primeiro positivo, a probabilidade da condição é de 50%. Entre os positivos nesse primeiro teste, o segundo é positivo em 80% dos doentes e em 40% dos não doentes. Qual é a probabilidade após o segundo positivo?", "options": ["80%.", "40%.", "100%.", "Aproximadamente 66,7%."], "correct": 4, "explain": "LR positiva condicionada ao primeiro positivo = 0,80/0,40 = 2. Odds desta etapa = 1; finais = 2; probabilidade = 2/3. Não é necessário presumir independência marginal quando se dispõe desse desempenho condicionado.", "tags": ["Confundir sensibilidade condicionada e VPP", "Confundir taxa de FP e pós-teste", "Presumir certeza por dois positivos", "Usar desempenho condicionado"], "focus": "Revise dependência entre testes. LR positiva condicionada ao primeiro positivo = 0,80/0,40 = 2. Odds desta etapa = 1; finais = 2; probabilidade = 2/3. Não é necessário presumir independência marginal quando se dispõe desse desempenho condicionado."}, {"id": "Q086", "version": 1, "theme": "Ganho de informação no reteste", "secondary": ["Testagem sequencial"], "area": "Testagem sequencial", "difficulty": "Básica", "skill": "Aplicar e interpretar indicadores", "text": "Um sistema apresenta novamente o mesmo laudo, sem nova amostra, nova medição ou interpretação adicional. Como atualizar a probabilidade?", "options": ["Multiplicar novamente pela LR do exame.", "Manter a atualização já feita, pois a reapresentação do mesmo dado não acrescenta evidência.", "Elevar a probabilidade ao quadrado.", "Voltar à prevalência inicial."], "correct": 2, "explain": "Contar duas vezes a mesma informação superestima a evidência. Um segundo registro do laudo não equivale a uma nova observação diagnóstica.", "tags": ["Contar duas vezes a mesma evidência", "Distinguir informação nova e repetida", "Operar diretamente sobre probabilidade", "Descartar evidência já obtida"], "focus": "Revise ganho de informação no reteste. Contar duas vezes a mesma informação superestima a evidência. Um segundo registro do laudo não equivale a uma nova observação diagnóstica."}, {"id": "Q087", "version": 1, "theme": "Limites do rastreamento", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Qual alternativa distingue corretamente falso positivo e sobrediagnóstico?", "options": ["Falso positivo indica uma condição ausente; sobrediagnóstico detecta uma condição real que não se tornaria clinicamente manifesta.", "Ambos significam que o laboratório errou.", "Sobrediagnóstico é qualquer resultado positivo com baixo VPP.", "Falso positivo ocorre quando uma condição real é detectada precocemente."], "correct": 1, "explain": "Sobrediagnóstico não é sinônimo de FP. Envolve detecção verdadeira de uma condição que não se tornaria clinicamente manifesta; FP envolve ausência da condição-alvo.", "tags": ["Distinguir falso positivo e sobrediagnóstico", "Atribuir ambos a erro laboratorial", "Confundir VPP e sobrediagnóstico", "Confundir detecção verdadeira e falso positivo"], "focus": "Revise limites do rastreamento. Sobrediagnóstico não é sinônimo de FP. Envolve detecção verdadeira de uma condição que não se tornaria clinicamente manifesta; FP envolve ausência da condição-alvo."}, {"id": "Q088", "version": 1, "theme": "Viés de verificação", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Avançada", "skill": "Avaliar criticamente a interpretação", "text": "Um estudo aplica o padrão de referência somente aos participantes com teste positivo. Os negativos não são investigados. Qual é a principal limitação?", "options": ["A prevalência obrigatoriamente será zero.", "Todos os positivos devem ser considerados VP.", "FN e VN não são adequadamente conhecidos, comprometendo a avaliação do desempenho.", "A especificidade será necessariamente 100%."], "correct": 3, "explain": "Sem verificar os negativos, não sabemos quantos deles têm ou não a condição. Não há uma matriz completa confiável.", "tags": ["Inferir prevalência sem referência completa", "Presumir todos os positivos verdadeiros", "Reconhecer verificação incompleta", "Presumir especificidade perfeita"], "focus": "Revise viés de verificação. Sem verificar os negativos, não sabemos quantos deles têm ou não a condição. Não há uma matriz completa confiável."}, {"id": "Q089", "version": 1, "theme": "Efeito de espectro", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Um teste foi avaliado comparando pacientes com doença muito avançada e voluntários saudáveis. Ele será usado em pessoas com sintomas leves e diagnósticos alternativos. Qual cautela é necessária?", "options": ["Apenas corrigir o tamanho da amostra.", "Avaliar a aplicabilidade, pois a composição dos grupos pode alterar o desempenho.", "Considerar sensibilidade e especificidade universais.", "Substituir a sensibilidade pela prevalência da nova população."], "correct": 2, "explain": "Casos graves podem ser mais fáceis de detectar; controles saudáveis, mais fáceis de distinguir. O uso pretendido envolve um espectro diferente.", "tags": ["Ajustar apenas N", "Avaliar transportabilidade", "Presumir desempenho universal", "Confundir sensibilidade e prevalência"], "focus": "Revise efeito de espectro. Casos graves podem ser mais fáceis de detectar; controles saudáveis, mais fáceis de distinguir. O uso pretendido envolve um espectro diferente."}, {"id": "Q090", "version": 1, "theme": "Viés de incorporação", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Avançada", "skill": "Avaliar criticamente a interpretação", "text": "Para definir quem tem a condição, uma comissão utiliza, entre outros dados, o próprio resultado do teste que está sendo avaliado. Qual problema pode ocorrer?", "options": ["A sensibilidade torna-se igual à prevalência.", "O teste perde necessariamente toda associação com a condição.", "Apenas o VPN pode ser alterado.", "A concordância pode ser artificialmente favorecida porque o teste participa da definição da referência."], "correct": 4, "explain": "Quando o teste integra a referência, sua avaliação perde independência metodológica. Isso pode favorecer estimativas de desempenho.", "tags": ["Confundir desempenho e prevalência", "Presumir perda total de associação", "Restringir viés ao VPN", "Reconhecer incorporação na referência"], "focus": "Revise viés de incorporação. Quando o teste integra a referência, sua avaliação perde independência metodológica. Isso pode favorecer estimativas de desempenho."}, {"id": "Q091", "version": 1, "theme": "Resultados indeterminados", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Um estudo teve 12% de resultados inconclusivos, mas os excluiu da análise sem informar suas características. Qual interpretação é adequada?", "options": ["Os inconclusivos devem ser automaticamente classificados como VN.", "A análise dos resultados conclusivos pode não representar o desempenho operacional em todos os participantes.", "A exclusão garante estimativas mais precisas e sem viés.", "Os inconclusivos são necessariamente FN."], "correct": 2, "explain": "Indeterminados afetam a utilidade prática. Sua frequência e tratamento devem ser explicitados; seu estado diagnóstico não pode ser presumido.", "tags": ["Classificar inconclusivos como VN", "Reconhecer limitação operacional", "Supor exclusão sem viés", "Classificar inconclusivos como FN"], "focus": "Revise resultados indeterminados. Indeterminados afetam a utilidade prática. Sua frequência e tratamento devem ser explicitados; seu estado diagnóstico não pode ser presumido."}, {"id": "Q092", "version": 1, "theme": "Precisão das estimativas", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Dois estudos estimaram sensibilidade de 90%. O primeiro apresentou IC de 70% a 98%; o segundo, de 87% a 93%. Qual afirmação é correta?", "options": ["O segundo apresenta estimativa mais precisa, sem que isso prove ausência de viés.", "O primeiro tem sensibilidade maior porque seu limite superior é maior.", "O segundo garante sensibilidade de 90% em qualquer população.", "Ambos têm a mesma precisão porque a estimativa pontual é igual."], "correct": 1, "explain": "O intervalo mais estreito expressa maior precisão sob o método utilizado. Precisão e validade são propriedades diferentes.", "tags": ["Distinguir precisão e validade", "Comparar apenas limite superior", "Presumir transportabilidade garantida", "Confundir estimativa pontual e precisão"], "focus": "Revise precisão das estimativas. O intervalo mais estreito expressa maior precisão sob o método utilizado. Precisão e validade são propriedades diferentes."}, {"id": "Q093", "version": 1, "theme": "Condição-alvo", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Um teste identifica um marcador associado a uma condição. Uma estudante afirma que qualquer presença do marcador equivale à condição clínica completa. Qual avaliação é adequada?", "options": ["A afirmação é sempre correta porque o marcador é mensurável.", "A especificidade deixa de ser necessária.", "É preciso definir a condição-alvo e a referência; presença de marcador e condição clínica não são automaticamente equivalentes.", "O VPP passa a ser 100%."], "correct": 3, "explain": "O significado de VP e FP depende do alvo. Detectar corretamente um marcador não estabelece sozinho a condição clínica de interesse.", "tags": ["Igualar marcador e diagnóstico clínico", "Dispensar especificidade", "Definir condição-alvo", "Presumir VPP perfeito"], "focus": "Revise condição-alvo. O significado de VP e FP depende do alvo. Detectar corretamente um marcador não estabelece sozinho a condição clínica de interesse."}, {"id": "Q094", "version": 1, "theme": "Avaliação de rastreamento", "secondary": ["Avaliação crítica"], "area": "Avaliação crítica", "difficulty": "Avançada", "skill": "Avaliar criticamente a interpretação", "text": "Um teste apresenta alta sensibilidade e especificidade. Isso, isoladamente, demonstra que um programa de rastreamento reduz mortalidade?", "options": ["Sim, porque detecção e benefício clínico são equivalentes.", "Sim, desde que o VPN seja superior a 95%.", "Sim, se o tamanho da população for grande.", "Não; benefício e danos do programa exigem evidências além da acurácia diagnóstica."], "correct": 4, "explain": "Detectar uma condição não prova que antecipar sua identificação melhora desfechos. Tratamento, seguimento, danos e organização também importam.", "tags": ["Igualar detecção e benefício", "Usar limiar de VPN para provar efetividade", "Confundir tamanho e benefício", "Distinguir acurácia e efetividade"], "focus": "Revise avaliação de rastreamento. Detectar uma condição não prova que antecipar sua identificação melhora desfechos. Tratamento, seguimento, danos e organização também importam."}, {"id": "Q095", "version": 1, "theme": "Escolha do teste", "secondary": ["Contexto e decisão"], "area": "Contexto e decisão", "difficulty": "Básica", "skill": "Avaliar criticamente a interpretação", "text": "Na primeira etapa de uma avaliação, a prioridade é reduzir casos não identificados. Todos os positivos terão investigação complementar. Alfa tem sensibilidade de 98% e especificidade de 70%; Beta, 80% e 95%. Qual conclusão responde ao objetivo definido?", "options": ["Beta perde menos casos porque é mais específico.", "Alfa perde menos casos, mas encaminha mais pessoas sem a condição para investigação.", "Alfa produz menos FN e menos FP.", "Beta é superior para qualquer objetivo."], "correct": 2, "explain": "Maior sensibilidade reduz FN; menor especificidade aumenta FP. O objetivo e o custo da investigação adicional devem orientar a escolha.", "tags": ["Associar especificidade a menos FN", "Relacionar objetivo e compromisso", "Presumir superioridade simultânea", "Generalizar escolha do teste"], "focus": "Revise escolha do teste. Maior sensibilidade reduz FN; menor especificidade aumenta FP. O objetivo e o custo da investigação adicional devem orientar a escolha."}, {"id": "Q096", "version": 1, "theme": "Consequências dos falsos positivos", "secondary": ["Contexto e decisão"], "area": "Contexto e decisão", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Em 10.000 pessoas, prevalência de 1%, sensibilidade de 90% e especificidade de 95% produzem 90 VP e 495 FP. O programa prevê investigação complementar de todos os positivos. Quantas pessoas deverão ser encaminhadas?", "options": ["90.", "100.", "495.", "585."], "correct": 4, "explain": "Encaminhamentos incluem VP + FP = 585. Planejar somente pelos casos verdadeiros subestima a demanda.", "tags": ["Contar apenas VP", "Contar todos os doentes", "Contar apenas FP", "Estimar carga total de positivos"], "focus": "Revise consequências dos falsos positivos. Encaminhamentos incluem VP + FP = 585. Planejar somente pelos casos verdadeiros subestima a demanda."}, {"id": "Q097", "version": 1, "theme": "Interpretação da mudança de probabilidade", "secondary": ["Contexto e decisão"], "area": "Contexto e decisão", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Um teste reduz a probabilidade da condição de 20% para 5%. Qual descrição está correta?", "options": ["Redução de 15 pontos percentuais e de 75% em relação à probabilidade inicial.", "Redução de 15% em relação à probabilidade inicial.", "Redução de 75 pontos percentuais.", "Eliminação completa da possibilidade da condição."], "correct": 1, "explain": "Diferença absoluta = 15 pontos percentuais. Redução relativa = 15/20 = 75%. Ainda há probabilidade residual de 5%.", "tags": ["Distinguir mudança absoluta e relativa", "Confundir pontos percentuais e percentual relativo", "Trocar percentual relativo por pontos", "Presumir exclusão absoluta"], "focus": "Revise interpretação da mudança de probabilidade. Diferença absoluta = 15 pontos percentuais. Redução relativa = 15/20 = 75%. Ainda há probabilidade residual de 5%."}, {"id": "Q098", "version": 1, "theme": "Limiares de decisão", "secondary": ["Contexto e decisão"], "area": "Contexto e decisão", "difficulty": "Intermediária", "skill": "Avaliar criticamente a interpretação", "text": "Dois cenários apresentam probabilidade pós-teste de 3%. No primeiro, perder a condição teria consequências graves; no segundo, a investigação adicional teria risco elevado e benefício limitado. Qual conclusão é adequada?", "options": ["Ambos exigem necessariamente a mesma conduta.", "Nenhum precisa de investigação porque 3% é baixo.", "As decisões podem diferir, pois dependem também dos danos, benefícios e alternativas disponíveis.", "Ambos exigem investigação até chegar a zero."], "correct": 3, "explain": "A probabilidade é um componente da decisão. O limiar depende das consequências de investigar, tratar ou deixar de identificar a condição.", "tags": ["Ignorar consequências distintas", "Adotar limiar universal", "Relacionar riscos e benefícios", "Exigir certeza absoluta"], "focus": "Revise limiares de decisão. A probabilidade é um componente da decisão. O limiar depende das consequências de investigar, tratar ou deixar de identificar a condição."}, {"id": "Q099", "version": 1, "theme": "Comunicação de resultados", "secondary": ["Contexto e decisão"], "area": "Contexto e decisão", "difficulty": "Básica", "skill": "Avaliar criticamente a interpretação", "text": "Um teste tem VPP de 30% na população avaliada. Qual comunicação traduz corretamente esse resultado?", "options": ["Você tem 30% da doença.", "Nesse grupo, aproximadamente 30 em cada 100 resultados positivos correspondem à condição.", "O teste acerta apenas 30% de todos os participantes.", "Há 70% de chance de o laboratório ter cometido um erro técnico."], "correct": 2, "explain": "VPP descreve a proporção com a condição entre positivos. FP não significam necessariamente falha técnica: podem decorrer das características do teste.", "tags": ["Tratar probabilidade como fração da doença", "Comunicar VPP em frequências", "Confundir VPP e acurácia", "Atribuir FP a erro técnico"], "focus": "Revise comunicação de resultados. VPP descreve a proporção com a condição entre positivos. FP não significam necessariamente falha técnica: podem decorrer das características do teste."}, {"id": "Q100", "version": 1, "theme": "Interpretação contextual dos resultados", "secondary": ["Contexto e decisão"], "area": "Contexto e decisão", "difficulty": "Avançada", "skill": "Avaliar criticamente a interpretação", "text": "Um serviço percebe queda no VPP depois de ampliar a testagem para pessoas assintomáticas. A sensibilidade e a especificidade foram consideradas constantes na análise. Qual interpretação deve ser examinada primeiro dentro desse modelo?", "options": ["O teste passou necessariamente a ter menor sensibilidade.", "A especificidade aumentou.", "O número maior de participantes reduz o VPP por definição.", "A população ampliada pode ter menor prevalência, aumentando a proporção de FP entre os positivos."], "correct": 4, "explain": "Sob desempenho fixo, menor prevalência reduz VPP. Na aplicação real é preciso verificar se o desempenho continua adequado à nova população.", "tags": ["Contradizer hipótese de desempenho fixo", "Atribuir queda a maior especificidade", "Atribuir VPP ao tamanho", "Reconhecer mudança de composição populacional"], "focus": "Revise interpretação contextual dos resultados. Sob desempenho fixo, menor prevalência reduz VPP. Na aplicação real é preciso verificar se o desempenho continua adequado à nova população."}]);
 const groupedQuestionThemes={"Q001":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q002":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo negativo"},"Q003":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q004":{"theme":"Matriz e desempenho do teste","subtheme":"Sensibilidade"},"Q005":{"theme":"Matriz e desempenho do teste","subtheme":"Matriz 2 × 2"},"Q006":{"theme":"Prevalência e valores preditivos","subtheme":"Prevalência e valores preditivos"},"Q007":{"theme":"Matriz e desempenho do teste","subtheme":"Especificidade"},"Q008":{"theme":"Decisão clínica e comunicação","subtheme":"Probabilidade pré-teste"},"Q009":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade após resultado negativo"},"Q010":{"theme":"Reteste e combinação de resultados","subtheme":"Testagem sequencial"},"Q011":{"theme":"Matriz e desempenho do teste","subtheme":"Sensibilidade"},"Q012":{"theme":"Matriz e desempenho do teste","subtheme":"Acurácia"},"Q013":{"theme":"Matriz e desempenho do teste","subtheme":"Especificidade"},"Q014":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q015":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade pós-teste"},"Q016":{"theme":"Prevalência e valores preditivos","subtheme":"Prevalência desconhecida"},"Q017":{"theme":"Reteste e combinação de resultados","subtheme":"Testagem sequencial"},"Q018":{"theme":"Reteste e combinação de resultados","subtheme":"Testagem sequencial"},"Q019":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q020":{"theme":"Matriz e desempenho do teste","subtheme":"Limiar do teste"},"Q021":{"theme":"Matriz e desempenho do teste","subtheme":"Matriz 2 × 2"},"Q022":{"theme":"Matriz e desempenho do teste","subtheme":"Matriz 2 × 2"},"Q023":{"theme":"Prevalência e valores preditivos","subtheme":"Prevalência"},"Q024":{"theme":"Prevalência e valores preditivos","subtheme":"Prevalência"},"Q025":{"theme":"Matriz e desempenho do teste","subtheme":"Sensibilidade"},"Q026":{"theme":"Matriz e desempenho do teste","subtheme":"Especificidade"},"Q027":{"theme":"Matriz e desempenho do teste","subtheme":"Contagens esperadas"},"Q028":{"theme":"Matriz e desempenho do teste","subtheme":"Contagens esperadas"},"Q029":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q030":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo negativo"},"Q031":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q032":{"theme":"Prevalência e valores preditivos","subtheme":"Prevalência"},"Q033":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Odds"},"Q034":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Odds"},"Q035":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q036":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q037":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q038":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q039":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade pós-teste"},"Q040":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade pós-teste"},"Q041":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade pós-teste"},"Q042":{"theme":"Reteste e combinação de resultados","subtheme":"Testagem sequencial"},"Q043":{"theme":"Reteste e combinação de resultados","subtheme":"Independência condicional"},"Q044":{"theme":"Reteste e combinação de resultados","subtheme":"Independência condicional"},"Q045":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo negativo"},"Q046":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q047":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Padrão de referência"},"Q048":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Efeito de espectro"},"Q049":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Intervalo de confiança"},"Q050":{"theme":"Decisão clínica e comunicação","subtheme":"Decisão clínica"},"Q051":{"theme":"Matriz e desempenho do teste","subtheme":"Especificidade"},"Q052":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q053":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Relações entre indicadores"},"Q054":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Integração dos indicadores"},"Q055":{"theme":"Matriz e desempenho do teste","subtheme":"Matriz 2 × 2"},"Q056":{"theme":"Matriz e desempenho do teste","subtheme":"Sensibilidade e especificidade"},"Q057":{"theme":"Matriz e desempenho do teste","subtheme":"Sensibilidade"},"Q058":{"theme":"Matriz e desempenho do teste","subtheme":"Especificidade"},"Q059":{"theme":"Matriz e desempenho do teste","subtheme":"Integração dos indicadores"},"Q060":{"theme":"Matriz e desempenho do teste","subtheme":"Matriz 2 × 2"},"Q061":{"theme":"Matriz e desempenho do teste","subtheme":"Denominadores"},"Q062":{"theme":"Matriz e desempenho do teste","subtheme":"Contagens esperadas"},"Q063":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q064":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q065":{"theme":"Prevalência e valores preditivos","subtheme":"Probabilidade após resultado negativo"},"Q066":{"theme":"Prevalência e valores preditivos","subtheme":"Prevalência e valores preditivos"},"Q067":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo negativo"},"Q068":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q069":{"theme":"Prevalência e valores preditivos","subtheme":"Relações entre indicadores"},"Q070":{"theme":"Prevalência e valores preditivos","subtheme":"Valor preditivo positivo"},"Q071":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade pós-teste"},"Q072":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade após resultado negativo"},"Q073":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q074":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q075":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Razão de verossimilhança"},"Q076":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Interpretação da razão de verossimilhança"},"Q077":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Interpretação da razão de verossimilhança"},"Q078":{"theme":"Bayes e probabilidade pós-teste","subtheme":"Probabilidade pré-teste"},"Q079":{"theme":"Reteste e combinação de resultados","subtheme":"Testagem sequencial"},"Q080":{"theme":"Reteste e combinação de resultados","subtheme":"Testagem sequencial"},"Q081":{"theme":"Reteste e combinação de resultados","subtheme":"Resultados discordantes"},"Q082":{"theme":"Reteste e combinação de resultados","subtheme":"Resultados discordantes"},"Q083":{"theme":"Reteste e combinação de resultados","subtheme":"Testagem sequencial"},"Q084":{"theme":"Reteste e combinação de resultados","subtheme":"Independência condicional"},"Q085":{"theme":"Reteste e combinação de resultados","subtheme":"Dependência entre testes"},"Q086":{"theme":"Reteste e combinação de resultados","subtheme":"Ganho de informação no reteste"},"Q087":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Limites do rastreamento"},"Q088":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Viés de verificação"},"Q089":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Efeito de espectro"},"Q090":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Viés de incorporação"},"Q091":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Resultados indeterminados"},"Q092":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Precisão das estimativas"},"Q093":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Condição-alvo"},"Q094":{"theme":"Qualidade dos estudos e limites do rastreamento","subtheme":"Avaliação de rastreamento"},"Q095":{"theme":"Decisão clínica e comunicação","subtheme":"Escolha do teste"},"Q096":{"theme":"Decisão clínica e comunicação","subtheme":"Consequências dos falsos positivos"},"Q097":{"theme":"Decisão clínica e comunicação","subtheme":"Interpretação da mudança de probabilidade"},"Q098":{"theme":"Decisão clínica e comunicação","subtheme":"Limiares de decisão"},"Q099":{"theme":"Decisão clínica e comunicação","subtheme":"Comunicação de resultados"},"Q100":{"theme":"Prevalência e valores preditivos","subtheme":"Interpretação contextual dos resultados"}};
 bank.forEach(q=>{const group=groupedQuestionThemes[q.id];q.subtheme=group.subtheme;q.theme=group.theme;q.area=group.theme;q.secondary=[...new Set([q.subtheme,...(q.secondary||[])])];});
+// Ampliação revisada: Q101–Q111 (tema 5), Q112–Q126 (tema 6).
+bank.push(...[
+  {
+    "id": "Q101",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Seleção dos participantes e efeito de espectro",
+    "secondary": [
+      "Seleção dos participantes e efeito de espectro"
+    ],
+    "difficulty": "Intermediária",
+    "title": "O teste funciona igualmente em todos os pacientes?",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Um novo teste para tuberculose foi avaliado em 120 pacientes hospitalizados com doença avançada e em 120 voluntários saudáveis, sem sintomas respiratórios. O estudo encontrou sensibilidade de 96% e especificidade de 98%, em valores arredondados. A equipe pretende usar esses mesmos valores em pacientes da atenção primária com sintomas leves e suspeita de tuberculose. Qual é a principal limitação dessa aplicação?",
+    "options": [
+      "A sensibilidade necessariamente será maior na atenção primária.",
+      "Comparar casos avançados com pessoas saudáveis pode produzir estimativas pouco representativas dos pacientes em que o teste será utilizado.",
+      "A especificidade de 98% demonstra que o teste dispensa avaliação em outras populações.",
+      "Uma amostra com igual número de doentes e não doentes impede calcular sensibilidade e especificidade."
+    ],
+    "correct": 2,
+    "explain": "O estudo comparou grupos muito distintos. Na prática, o teste precisará diferenciar casos leves de outras doenças com manifestações semelhantes. Seu desempenho pode mudar nesse contexto.",
+    "feedbackSteps": [
+      "Identifique quem participou: casos avançados e voluntários saudáveis.",
+      "Compare com o uso pretendido: pessoas com suspeita clínica, incluindo casos leves e outras doenças respiratórias.",
+      "A sensibilidade e a especificidade observadas podem não representar esse novo espectro de pacientes."
+    ],
+    "naturalExplanation": "Imagine avaliar uma balança apenas com objetos muito leves e muito pesados. Isso não mostra tão bem sua capacidade de distinguir objetos com pesos próximos. Casos avançados podem ser mais fáceis de detectar do que casos leves; pessoas completamente saudáveis podem ser mais fáceis de distinguir dos doentes do que pessoas com outras doenças semelhantes.",
+    "optionReasons": [
+      "Não há garantia de aumento da sensibilidade.",
+      "Correta: a seleção dos participantes limita a aplicação das estimativas ao cenário pretendido.",
+      "Uma estimativa elevada não garante desempenho semelhante em outra população.",
+      "É possível calcular essas medidas com grupos de igual tamanho; a principal limitação é a representatividade."
+    ],
+    "tags": [
+      "Presumir aumento obrigatório da sensibilidade",
+      "Reconhecer limitação de espectro e aplicabilidade",
+      "Generalizar desempenho sem validação",
+      "Confundir composição da amostra com impossibilidade de cálculo"
+    ],
+    "focus": "Estude efeito de espectro, seleção dos participantes e aplicabilidade dos estudos."
+  },
+  {
+    "id": "Q102",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Viés de verificação parcial",
+    "secondary": [
+      "Viés de verificação parcial"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Confirmar apenas os positivos",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Em um estudo com 800 pessoas, um teste apresentou 160 resultados positivos e 640 negativos. Todos os positivos realizaram o exame de referência. Entre os negativos, apenas 64 realizaram esse exame. Os outros 576 foram considerados sem doença, sem investigação adicional. Qual é a principal preocupação metodológica?",
+    "options": [
+      "A existência de mais negativos do que positivos caracteriza viés de duração.",
+      "O teste apresenta necessariamente especificidade de 100%.",
+      "A doença entre os participantes negativos não verificados pode passar despercebida, comprometendo as estimativas de desempenho.",
+      "Investigar todos os positivos garante uma estimativa válida da sensibilidade."
+    ],
+    "correct": 3,
+    "explain": "Sem verificar adequadamente os negativos, o estudo pode deixar de identificar falsos negativos. Isso pode distorcer as estimativas de desempenho.",
+    "feedbackSteps": [
+      "Um teste negativo não demonstra, sozinho, ausência de doença.",
+      "Se houver doentes entre os 576 não verificados, eles deveriam ser classificados como falsos negativos.",
+      "Considerá-los automaticamente saudáveis pode ocultar erros do teste. A direção e a magnitude do viés dependem da situação."
+    ],
+    "naturalExplanation": "Se conferimos apenas os alarmes de um sistema, não descobrimos facilmente os casos em que ele deveria ter alarmado e ficou em silêncio. Uma amostra aleatória de negativos pode integrar um desenho válido, com análise apropriada; isso não autoriza classificar todos os demais como saudáveis.",
+    "optionReasons": [
+      "Viés de duração envolve a detecção preferencial de doenças de evolução lenta.",
+      "Esses dados não demonstram especificidade perfeita.",
+      "Correta: a verificação incompleta pode comprometer a classificação dos participantes.",
+      "Sensibilidade exige identificar também os doentes com teste negativo."
+    ],
+    "tags": [
+      "Confundir verificação parcial com viés de duração",
+      "Presumir especificidade perfeita",
+      "Reconhecer verificação parcial",
+      "Ignorar falsos negativos não verificados"
+    ],
+    "focus": "Estude verificação parcial e identificação dos falsos negativos."
+  },
+  {
+    "id": "Q103",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Interpretação sem cegamento",
+    "secondary": [
+      "Interpretação sem cegamento"
+    ],
+    "difficulty": "Intermediária",
+    "title": "O avaliador conhece o resultado anterior",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Um estudo compara um novo exame de imagem com um exame de referência. Antes de interpretar cada exame de referência, o avaliador recebe o resultado do novo teste. Alguns achados da referência são de interpretação subjetiva. Qual medida reduziria o risco de viés?",
+    "options": [
+      "Interpretar o exame de referência sem conhecer o resultado do novo teste.",
+      "Informar também o nome do fabricante do novo teste ao avaliador.",
+      "Excluir todos os casos em que os exames discordam.",
+      "Considerar o novo teste correto sempre que houver dúvida."
+    ],
+    "correct": 1,
+    "explain": "Conhecer o resultado do teste avaliado pode influenciar a interpretação da referência. A interpretação independente reduz esse risco.",
+    "feedbackSteps": [
+      "O diagnóstico de referência é usado para julgar o teste avaliado.",
+      "Conhecer seu resultado pode influenciar a leitura de achados duvidosos e aumentar artificialmente a concordância.",
+      "Interpretar a referência sem acesso ao resultado do teste avaliado reduz essa possibilidade."
+    ],
+    "naturalExplanation": "Se o avaliador espera encontrar doença após saber que o teste foi positivo, pode interpretar um achado duvidoso nessa direção. Conhecer o resultado não prova que ocorreu viés, mas cria uma possibilidade relevante, especialmente em avaliações subjetivas.",
+    "optionReasons": [
+      "Correta: reduz a influência do resultado do teste sobre a interpretação da referência.",
+      "O nome do fabricante não resolve a falta de cegamento.",
+      "Discordâncias são essenciais para identificar erros; excluí-las favorece artificialmente a concordância.",
+      "Dar prioridade ao teste em caso de dúvida compromete a independência da comparação."
+    ],
+    "tags": [
+      "Reconhecer importância do cegamento",
+      "Não resolver falta de cegamento",
+      "Excluir discordâncias da análise",
+      "Favorecer o teste avaliado"
+    ],
+    "focus": "Estude cegamento dos avaliadores e independência da interpretação."
+  },
+  {
+    "id": "Q104",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Viés de incorporação",
+    "secondary": [
+      "Viés de incorporação"
+    ],
+    "difficulty": "Avançada",
+    "title": "O teste ajuda a definir a própria verdade",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Pesquisadores avaliam um teste rápido para determinada infecção. O diagnóstico final usado como referência é definido por um conjunto de critérios que inclui sintomas, cultura e o próprio resultado do teste rápido avaliado. Qual é o problema principal?",
+    "options": [
+      "Um diagnóstico de referência nunca pode combinar informações de diferentes exames.",
+      "O uso de sintomas torna qualquer estudo de acurácia inválido.",
+      "O estudo apresenta obrigatoriamente viés de tempo de antecipação.",
+      "Incluir o teste avaliado na definição do diagnóstico de referência pode favorecer artificialmente sua concordância com a referência."
+    ],
+    "correct": 4,
+    "explain": "O teste participa da definição usada para julgar se ele está correto. Essa dependência pode superestimar seu desempenho.",
+    "feedbackSteps": [
+      "A referência deveria fornecer uma classificação adequada da condição para a comparação.",
+      "Aqui, o resultado do teste avaliado também ajuda a definir essa classificação.",
+      "A comparação torna-se parcialmente circular e pode favorecer o próprio teste: é o viés de incorporação."
+    ],
+    "naturalExplanation": "É como corrigir uma resposta usando um gabarito construído, em parte, com aquela mesma resposta. Referências compostas podem ser apropriadas; o problema específico é incorporar o teste que está sendo avaliado.",
+    "optionReasons": [
+      "Uma referência pode combinar informações, desde que seja adequada e bem definida.",
+      "Informações clínicas podem fazer parte de uma referência apropriada.",
+      "Antecipação envolve o diagnóstico mais precoce e a interpretação da sobrevida.",
+      "Correta: identifica a incorporação do teste avaliado na referência."
+    ],
+    "tags": [
+      "Rejeitar toda referência composta",
+      "Rejeitar informação clínica na referência",
+      "Confundir incorporação com antecipação",
+      "Reconhecer viés de incorporação"
+    ],
+    "focus": "Estude independência entre teste avaliado e diagnóstico de referência."
+  },
+  {
+    "id": "Q105",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Intervalo entre exames e mudança da condição clínica",
+    "secondary": [
+      "Intervalo entre exames e mudança da condição clínica"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Os exames ocorreram em momentos diferentes",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Em 300 pacientes com suspeita de infecção, um novo teste foi realizado no primeiro dia de atendimento. O exame de referência foi realizado 21 dias depois. Nesse intervalo, parte dos participantes recebeu tratamento capaz de eliminar a infecção. Qual é a interpretação mais adequada?",
+    "options": [
+      "Toda discordância demonstra que o novo teste estava errado.",
+      "A condição dos participantes pode ter mudado entre os exames, dificultando a interpretação das discordâncias.",
+      "Quanto maior o intervalo, mais válida será a comparação.",
+      "O tratamento altera apenas o VPP, mantendo todas as outras medidas obrigatoriamente iguais."
+    ],
+    "correct": 2,
+    "explain": "Os exames podem avaliar momentos diferentes da doença. Uma discordância pode decorrer da mudança clínica, e não de um erro do teste inicial.",
+    "feedbackSteps": [
+      "Verifique quando cada exame foi realizado.",
+      "Considere que o tratamento pode mudar o estado da infecção antes da referência.",
+      "Um positivo inicial e um negativo posterior podem refletir corretamente momentos diferentes; não se deve atribuir toda discordância a erro do teste."
+    ],
+    "naturalExplanation": "Uma fotografia de hoje e outra após três semanas de tratamento podem mostrar situações diferentes. Para avaliar acurácia, é importante que os exames representem a mesma condição clínica; o intervalo aceitável depende da velocidade de mudança dessa condição.",
+    "optionReasons": [
+      "A condição pode ter mudado, portanto discordância não prova erro inicial.",
+      "Correta: reconhece a influência do tempo e do tratamento.",
+      "Um intervalo maior pode aumentar a chance de mudança clínica.",
+      "Não existe garantia de que apenas o VPP seja afetado."
+    ],
+    "tags": [
+      "Atribuir toda discordância a erro",
+      "Reconhecer mudança clínica entre exames",
+      "Presumir vantagem de maior intervalo",
+      "Restringir indevidamente efeitos do tratamento ao VPP"
+    ],
+    "focus": "Estude tempo entre os exames, fluxo dos participantes e intervenções durante o estudo."
+  },
+  {
+    "id": "Q106",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Precisão das estimativas",
+    "secondary": [
+      "Precisão das estimativas"
+    ],
+    "difficulty": "Básica",
+    "title": "Resultado perfeito em poucos pacientes",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Um teste foi positivo nos 12 participantes com a doença e negativo nos 18 participantes sem a doença. Os pesquisadores divulgaram sensibilidade e especificidade de 100%. Qual conclusão é adequada?",
+    "options": [
+      "O teste nunca produzirá falsos positivos ou falsos negativos.",
+      "Estudos adicionais são desnecessários porque não houve erros.",
+      "As estimativas observadas foram de 100%, mas a amostra pequena não permite afirmar desempenho perfeito na população.",
+      "Não é possível calcular sensibilidade e especificidade quando não há erros."
+    ],
+    "correct": 3,
+    "explain": "O teste não errou nessa amostra. Isso não demonstra que nunca errará em outros pacientes. Estimativas com poucos participantes apresentam maior incerteza.",
+    "feedbackSteps": [
+      "Sensibilidade observada = 12/12 = 100%.",
+      "Especificidade observada = 18/18 = 100%.",
+      "Os cálculos estão corretos, mas uma amostra pequena não elimina a incerteza sobre o desempenho na população."
+    ],
+    "naturalExplanation": "Observar poucos pacientes oferece pouca informação sobre erros raros. É semelhante a lançar uma moeda algumas vezes e obter apenas cara: isso não demonstra que coroa seja impossível. Intervalos de confiança expressam parte da incerteza amostral; não corrigem, por si, vieses do estudo.",
+    "optionReasons": [
+      "Transforma uma observação amostral em garantia absoluta.",
+      "Outros estudos podem melhorar a precisão e avaliar outros pacientes.",
+      "Correta: distingue a estimativa observada da incerteza sobre o desempenho real.",
+      "As medidas podem ser calculadas mesmo quando não se observam erros."
+    ],
+    "tags": [
+      "Generalizar ausência de erros para certeza",
+      "Dispensar validação adicional",
+      "Reconhecer incerteza amostral",
+      "Presumir impossibilidade de cálculo sem erros"
+    ],
+    "focus": "Estude tamanho amostral, intervalos de confiança e ausência de erros observados."
+  },
+  {
+    "id": "Q107",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Viés de tempo de antecipação",
+    "secondary": [
+      "Viés de tempo de antecipação"
+    ],
+    "difficulty": "Básica",
+    "title": "Diagnóstico mais cedo significa viver mais?",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Em um exemplo hipotético, sem rastreamento, um câncer seria diagnosticado aos 67 anos e a pessoa morreria aos 72. Com rastreamento, o diagnóstico ocorre aos 63, mas a morte permanece aos 72 anos. Qual interpretação é correta?",
+    "options": [
+      "A sobrevida medida desde o diagnóstico aumentou de 5 para 9 anos, mas não houve prolongamento da vida nesse exemplo.",
+      "O rastreamento acrescentou 4 anos à vida da pessoa.",
+      "A mudança demonstra redução da mortalidade.",
+      "O diagnóstico aos 63 anos demonstra que o tumor foi um falso positivo."
+    ],
+    "correct": 1,
+    "explain": "O diagnóstico foi antecipado em quatro anos. A data da morte não mudou. A sobrevida após o diagnóstico aumentou sem aumento da duração da vida.",
+    "feedbackSteps": [
+      "Sem rastreamento: 72 − 67 = 5 anos após o diagnóstico.",
+      "Com rastreamento: 72 − 63 = 9 anos após o diagnóstico.",
+      "A contagem começou quatro anos antes, mas a pessoa viveu até a mesma idade."
+    ],
+    "naturalExplanation": "É como iniciar o cronômetro mais cedo sem mudar o momento em que ele para. O período conhecido da doença aumentou; a vida não foi prolongada nesse exemplo.",
+    "optionReasons": [
+      "Correta: distingue sobrevida medida de prolongamento da vida.",
+      "Os quatro anos foram acrescentados ao período após o diagnóstico, não à vida.",
+      "A morte ocorreu à mesma idade; não há demonstração de redução de mortalidade.",
+      "O câncer pode ser real; o problema está na interpretação do benefício."
+    ],
+    "tags": [
+      "Reconhecer viés de antecipação",
+      "Confundir antecipação com ganho de vida",
+      "Inferir redução de mortalidade pela sobrevida",
+      "Confundir antecipação com falso positivo"
+    ],
+    "focus": "Estude sobrevida após o diagnóstico versus mortalidade."
+  },
+  {
+    "id": "Q108",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Viés de duração",
+    "secondary": [
+      "Viés de duração"
+    ],
+    "difficulty": "Avançada",
+    "title": "Por que o rastreamento encontra mais tumores lentos?",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Dois tipos de tumor podem ser detectados antes de causar sintomas. O tipo lento permanece nessa fase detectável por cerca de 8 anos; o rápido, por apenas 6 meses. Um programa realiza o exame a cada 2 anos. Por que os tumores encontrados pelo rastreamento podem apresentar prognóstico aparentemente melhor?",
+    "options": [
+      "Todos os tumores rápidos serão encontrados entre duas rodadas.",
+      "O exame transforma tumores rápidos em tumores lentos.",
+      "O diagnóstico de um tumor lento é sempre um falso positivo.",
+      "Os tumores lentos têm uma janela maior de detecção e podem ficar proporcionalmente mais representados entre os casos rastreados."
+    ],
+    "correct": 4,
+    "explain": "Doenças que permanecem mais tempo na fase detectável têm mais oportunidades de ser encontradas. Isso favorece a identificação de casos com evolução naturalmente mais lenta.",
+    "feedbackSteps": [
+      "Um tumor detectável por 8 anos tem oportunidades de aparecer em várias rodadas.",
+      "Um tumor detectável por 6 meses pode surgir e causar sintomas entre duas rodadas de um programa bienal.",
+      "Os casos rastreados podem incluir uma proporção maior de tumores lentos; o melhor prognóstico não demonstra, sozinho, efeito do rastreamento."
+    ],
+    "naturalExplanation": "Uma janela que permanece aberta por muitos anos é mais fácil de encontrar durante visitas periódicas do que uma que se fecha em poucos meses. Comparar apenas casos rastreados com casos sintomáticos pode comparar doenças de comportamentos diferentes.",
+    "optionReasons": [
+      "Tumores rápidos podem surgir e tornar-se sintomáticos entre rodadas.",
+      "O exame detecta; não modifica por si a velocidade de evolução.",
+      "Um tumor lento pode ser real.",
+      "Correta: descreve a seleção preferencial de casos com maior fase detectável."
+    ],
+    "tags": [
+      "Presumir detecção de todos os tumores rápidos",
+      "Atribuir mudança biológica ao exame",
+      "Confundir tumor lento com falso positivo",
+      "Reconhecer viés de duração"
+    ],
+    "focus": "Diferencie viés de duração, que seleciona casos de evolução diferente, de antecipação, que muda o início da contagem de sobrevida."
+  },
+  {
+    "id": "Q109",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Sobrediagnóstico",
+    "secondary": [
+      "Sobrediagnóstico"
+    ],
+    "difficulty": "Básica",
+    "title": "Doença real que nunca causaria problemas",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Em um cenário hipotético, o rastreamento identifica uma pequena lesão tumoral confirmada pelo exame de referência. Considere que essa lesão jamais causaria sintomas ou morte durante a vida da pessoa, mesmo sem tratamento. Como se classifica essa situação?",
+    "options": [
+      "Falso positivo, porque a doença nunca causaria sintomas.",
+      "Sobrediagnóstico, porque uma doença real foi detectada sem que viesse a causar problemas durante a vida da pessoa.",
+      "Falso negativo, porque não houve sintomas.",
+      "Benefício comprovado do rastreamento, porque houve confirmação da lesão."
+    ],
+    "correct": 2,
+    "explain": "No sobrediagnóstico, a alteração é real. O problema é detectar uma condição que não causaria dano durante a vida e que pode desencadear intervenções desnecessárias.",
+    "feedbackSteps": [
+      "Pergunte se a lesão existe: o cenário diz que ela foi confirmada.",
+      "Pergunte se causaria problemas sem detecção: o cenário diz que não.",
+      "Essa detecção corresponde a sobrediagnóstico, não a falso positivo. Sobretratamento é uma possível consequência, mas não foi informado que ocorreu."
+    ],
+    "naturalExplanation": "Encontrar uma alteração real não garante que encontrá-la melhore a vida da pessoa. Na prática, identificar com certeza qual lesão individual nunca causaria problemas pode ser difícil; o exercício fornece essa condição explicitamente.",
+    "optionReasons": [
+      "Falso positivo indica doença ausente; aqui a lesão é real.",
+      "Correta: corresponde à definição apresentada.",
+      "O exame detectou a lesão; não houve resultado falsamente negativo.",
+      "Confirmar a lesão não comprova benefício da detecção."
+    ],
+    "tags": [
+      "Confundir sobrediagnóstico com falso positivo",
+      "Reconhecer sobrediagnóstico",
+      "Confundir sobrediagnóstico com falso negativo",
+      "Confundir detecção confirmada com benefício"
+    ],
+    "focus": "Diferencie falso positivo, sobrediagnóstico e sobretratamento."
+  },
+  {
+    "id": "Q110",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Avaliação da efetividade do rastreamento",
+    "secondary": [
+      "Avaliação da efetividade do rastreamento"
+    ],
+    "difficulty": "Avançada",
+    "title": "Qual resultado demonstra benefício?",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Um ensaio clínico distribuiu aleatoriamente 20.000 pessoas entre dois grupos iguais. Após dez anos, houve 60 mortes pelo câncer estudado no grupo convidado ao rastreamento e 80 no controle. Considere acompanhamento e identificação das causas de morte adequados. Qual interpretação é correta?",
+    "options": [
+      "O programa reduziu o risco absoluto de morte em 25 pontos percentuais.",
+      "O aumento do número de diagnósticos seria uma demonstração mais direta de benefício.",
+      "A redução absoluta observada foi de 0,2 ponto percentual e a relativa foi de 25%; a mortalidade fornece uma avaliação de benefício que não depende apenas da sobrevida após o diagnóstico.",
+      "O estudo demonstrou que não existem danos associados ao rastreamento."
+    ],
+    "correct": 3,
+    "explain": "O risco observado foi de 0,6% no grupo convidado e de 0,8% no controle: redução absoluta de 0,2 ponto percentual e relativa de 25%. A certeza sobre o efeito exige avaliar também sua incerteza estatística.",
+    "feedbackSteps": [
+      "Cada grupo tinha 10.000 participantes: 60/10.000 = 0,6%; 80/10.000 = 0,8%.",
+      "Redução absoluta = 0,8% − 0,6% = 0,2 ponto percentual, ou 2 mortes a menos por 1.000 participantes em dez anos.",
+      "Redução relativa = (0,8% − 0,6%)/0,8% = 25%.",
+      "Mortalidade é um desfecho relevante. Os números mostram uma diferença observada, mas, sem intervalo de confiança ou análise estatística, não afirmamos que o benefício foi comprovado com precisão. Também é preciso avaliar os danos."
+    ],
+    "naturalExplanation": "De cada mil participantes, ocorreram oito mortes no controle e seis no grupo convidado. A diferença foi de duas em mil. Isso é distinto de começar a contar a sobrevida mais cedo após um diagnóstico antecipado.",
+    "optionReasons": [
+      "25% é a redução relativa, não a diferença em pontos percentuais.",
+      "Detectar mais casos não demonstra, sozinho, melhora de desfechos.",
+      "Correta: calcula as duas reduções e identifica um desfecho relevante, sem dispensar a análise de incerteza.",
+      "Um possível benefício não exclui danos do programa."
+    ],
+    "tags": [
+      "Confundir redução absoluta e relativa",
+      "Usar detecção como prova de benefício",
+      "Interpretar mortalidade e magnitude do efeito",
+      "Presumir ausência de danos"
+    ],
+    "focus": "Estude mortalidade, redução absoluta e relativa, incerteza estatística e balanço entre benefícios e danos."
+  },
+  {
+    "id": "Q111",
+    "version": 1,
+    "theme": "Qualidade dos estudos e limites do rastreamento",
+    "area": "Qualidade dos estudos e limites do rastreamento",
+    "subtheme": "Capacidade do sistema e condições para rastreamento",
+    "secondary": [
+      "Capacidade do sistema e condições para rastreamento"
+    ],
+    "difficulty": "Básica",
+    "title": "Bom teste, mas sem continuidade do cuidado",
+    "skill": "Avaliar criticamente estudos e rastreamento",
+    "text": "Um município pretende rastrear 5.000 pessoas assintomáticas com um teste de sensibilidade de 95% e especificidade de 98%. Não há fluxo definido para confirmação diagnóstica, e os serviços não conseguem oferecer tratamento oportuno aos casos identificados. Qual é a avaliação mais adequada?",
+    "options": [
+      "O desempenho do teste, sozinho, não justifica o programa; é necessário garantir avaliação dos positivos e continuidade do cuidado.",
+      "Sensibilidade de 95% garante benefício populacional, independentemente do acesso ao tratamento.",
+      "Como o teste não é invasivo, o programa não pode causar danos.",
+      "Todos os resultados positivos devem ser tratados como diagnósticos confirmados para evitar encaminhamentos."
+    ],
+    "correct": 1,
+    "explain": "Rastreamento é um processo de cuidado, não apenas a aplicação de um exame. Sem investigação e tratamento adequados, a detecção pode não produzir o benefício esperado.",
+    "feedbackSteps": [
+      "O desempenho diagnóstico descreve a classificação produzida pelo teste.",
+      "O programa também precisa de avaliação dos resultados, confirmação quando necessária e cuidado oportuno.",
+      "Sem continuidade, a detecção pode gerar preocupação e intervenções sem alcançar o benefício pretendido."
+    ],
+    "naturalExplanation": "Pense em uma sequência: identificação da população, exame, avaliação do resultado, confirmação quando necessária, cuidado e acompanhamento. Se uma etapa essencial não funciona, um bom exame não resolve sozinho o problema.",
+    "optionReasons": [
+      "Correta: considera o programa completo.",
+      "Sensibilidade descreve detecção entre doentes, não garante benefício do cuidado.",
+      "Danos também podem decorrer dos resultados e das intervenções posteriores.",
+      "Um positivo de rastreamento não equivale automaticamente a diagnóstico confirmado."
+    ],
+    "tags": [
+      "Reconhecer necessidade de continuidade do cuidado",
+      "Confundir sensibilidade com benefício populacional",
+      "Presumir ausência de danos em teste não invasivo",
+      "Tratar triagem positiva como confirmação"
+    ],
+    "focus": "Estude critérios para rastreamento, continuidade do cuidado e diferença entre acurácia e benefício do programa."
+  },
+  {
+    "id": "Q112",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Comunicação do VPP e necessidade de investigação",
+    "secondary": [
+      "Comunicação do VPP e necessidade de investigação"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Como explicar um resultado positivo?",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Uma mulher de 31 anos procura atendimento de planejamento familiar e apresenta resultado positivo em um teste para investigar anovulação. Em uma população semelhante de 2.000 mulheres, a prevalência é de 3%, a sensibilidade é de 100% e a especificidade é de 95%. Considere esses parâmetros aplicáveis à situação do exercício. Qual explicação é mais adequada?",
+    "options": [
+      "O teste tem sensibilidade de 100%, portanto você certamente apresenta anovulação.",
+      "Nesse cenário, aproximadamente 38% das mulheres com resultado positivo apresentam anovulação; precisamos interpretar seu resultado junto da avaliação clínica.",
+      "A especificidade de 95% significa que sua probabilidade de anovulação é de 95%.",
+      "Como a prevalência é de 3%, o resultado positivo não modifica a suspeita."
+    ],
+    "correct": 2,
+    "explain": "O VPP é aproximadamente 38,2%. O positivo aumenta a suspeita em relação aos 3% iniciais, mas não confirma isoladamente a condição.",
+    "feedbackSteps": [
+      "Em 2.000 mulheres: 60 têm anovulação e 1.940 não têm.",
+      "VP = 60 × 100% = 60; FP = 1.940 × 5% = 97.",
+      "VPP = 60/(60 + 97) = 38,2%. A estimativa exige que o modelo seja aplicável à pessoa; o resultado deve ser integrado à avaliação clínica."
+    ],
+    "naturalExplanation": "Entre 157 positivos, esperamos 60 casos reais e 97 alarmes falsos. Sensibilidade perfeita significa detectar todos os casos no modelo; não significa que todo positivo seja um caso real.",
+    "optionReasons": [
+      "Sensibilidade descreve positivos entre quem tem a condição.",
+      "Correta: comunica a probabilidade após o positivo e reconhece sua incerteza.",
+      "Especificidade não é probabilidade de doença após positivo.",
+      "O resultado elevou a probabilidade de 3% para cerca de 38%."
+    ],
+    "tags": [
+      "Confundir sensibilidade com certeza após positivo",
+      "Comunicar VPP e incerteza",
+      "Confundir especificidade com VPP",
+      "Ignorar atualização após positivo"
+    ],
+    "focus": "Diferencie sensibilidade, especificidade e VPP e explicite a incerteza.",
+    "p": 3,
+    "s": 100,
+    "e": 95,
+    "n": 2000
+  },
+  {
+    "id": "Q113",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Probabilidade residual após resultado negativo",
+    "secondary": [
+      "Probabilidade residual após resultado negativo"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Um negativo encerra a investigação?",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Uma pessoa apresenta probabilidade pré-teste de 60% para uma doença. Um exame hipotético, com sensibilidade de 90% e especificidade de 90%, é negativo. Qual interpretação é adequada?",
+    "options": [
+      "A doença foi excluída porque o exame é negativo.",
+      "A probabilidade de doença após o negativo é de 90%.",
+      "A probabilidade diminuiu para aproximadamente 14,3%, e continuar a investigação depende do contexto e das consequências de perder o diagnóstico.",
+      "A probabilidade permanece em 60%, porque negativos não modificam a suspeita."
+    ],
+    "correct": 3,
+    "explain": "O negativo reduziu a probabilidade, mas deixou uma chance residual de cerca de 14,3%. Redução da suspeita não significa exclusão automática.",
+    "feedbackSteps": [
+      "Em 1.000 pessoas semelhantes: 600 têm a doença e 400 não têm.",
+      "Entre doentes, FN = 600 × 10% = 60; entre não doentes, VN = 400 × 90% = 360.",
+      "P(doença | negativo) = 60/(60 + 360) = 14,3%. A decisão depende também das consequências e das alternativas disponíveis."
+    ],
+    "naturalExplanation": "No grupo dos 420 negativos, 60 ainda têm a doença. O resultado foi informativo e reduziu a suspeita, mas não tornou o risco zero.",
+    "optionReasons": [
+      "Ignora a possibilidade de falsos negativos.",
+      "Confunde parâmetro do exame com probabilidade posterior.",
+      "Correta: combina o número com a interpretação contextual.",
+      "O negativo reduziu a probabilidade de 60% para 14,3%."
+    ],
+    "tags": [
+      "Tratar negativo como exclusão absoluta",
+      "Confundir desempenho com probabilidade posterior",
+      "Reconhecer risco residual contextual",
+      "Ignorar atualização após negativo"
+    ],
+    "focus": "Estude complemento do VPN e importância da probabilidade pré-teste.",
+    "p": 60,
+    "s": 90,
+    "e": 90,
+    "n": 1000
+  },
+  {
+    "id": "Q114",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Limiares de decisão",
+    "secondary": [
+      "Limiares de decisão"
+    ],
+    "difficulty": "Básica",
+    "title": "A probabilidade está na zona de investigação",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Em um modelo didático, probabilidades abaixo de 3% permitem acompanhamento sem novos exames para essa hipótese; de 3% a 75%, inclusive, indicam investigação adicional; acima de 75%, permitem considerar a intervenção prevista no modelo. Após um exame, a probabilidade passou de 8% para 20%. Qual decisão corresponde ao modelo? Os limiares são hipotéticos, não recomendações universais.",
+    "options": [
+      "Continuar a investigação, pois a probabilidade permanece entre os dois limiares.",
+      "Encerrar a investigação porque o resultado ficou abaixo de 50%.",
+      "Iniciar a intervenção porque a probabilidade aumentou.",
+      "Ignorar o exame porque ele não produziu certeza."
+    ],
+    "correct": 1,
+    "explain": "A probabilidade de 20% permanece na faixa de investigação adicional. Aumento da suspeita não equivale automaticamente a indicação de intervenção.",
+    "feedbackSteps": [
+      "Identifique a faixa de investigação: de 3% a 75%.",
+      "Antes do exame, 8% estava nessa faixa. Depois, 20% continua nela.",
+      "A decisão depende da posição em relação aos limiares, não apenas do aumento ou da queda da probabilidade."
+    ],
+    "naturalExplanation": "O exame mudou o grau de suspeita, mas não levou a probabilidade para outra zona do modelo. Não existe um limiar universal de 50% para todas as decisões.",
+    "optionReasons": [
+      "Correta: aplica os limites definidos.",
+      "O exercício não utiliza 50% como limiar.",
+      "O modelo exige mais de 75% para considerar a intervenção.",
+      "Um exame pode fornecer informação sem produzir certeza."
+    ],
+    "tags": [
+      "Aplicar limiares de investigação",
+      "Usar limiar não definido",
+      "Confundir aumento de risco com intervenção",
+      "Exigir certeza para utilidade do exame"
+    ],
+    "focus": "Diferencie atualização da probabilidade e ultrapassagem de um limiar."
+  },
+  {
+    "id": "Q115",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Decisão após redução suficiente da suspeita",
+    "secondary": [
+      "Decisão após redução suficiente da suspeita"
+    ],
+    "difficulty": "Básica",
+    "title": "A probabilidade caiu abaixo do limiar",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Em um exercício, probabilidades inferiores a 2% permitem acompanhamento sem investigação adicional imediata, com orientações de retorno. Após um negativo, a probabilidade caiu de 12% para 1%. Qual interpretação corresponde ao modelo? O limiar é hipotético, não universal.",
+    "options": [
+      "A doença tornou-se impossível.",
+      "O exame não ajudou, porque a probabilidade não chegou a zero.",
+      "Deve-se investigar até eliminar qualquer possibilidade de doença.",
+      "A probabilidade ficou abaixo do limiar definido, permitindo o acompanhamento previsto, sem afirmar risco zero."
+    ],
+    "correct": 4,
+    "explain": "O resultado levou a probabilidade para abaixo do limiar do exercício. A decisão pode mudar mesmo permanecendo uma pequena incerteza.",
+    "feedbackSteps": [
+      "O limiar definido foi de 2%.",
+      "Após o negativo, a estimativa é 1%, portanto abaixo do limiar.",
+      "O modelo permite acompanhamento com orientações de retorno; isso não significa ausência absoluta da doença."
+    ],
+    "naturalExplanation": "Uma probabilidade de 1% corresponde a aproximadamente uma pessoa com a doença em cada cem pessoas semelhantes. O exercício considera esse risco suficiente para a estratégia de acompanhamento, não para declarar impossibilidade.",
+    "optionReasons": [
+      "1% é diferente de zero.",
+      "O exame reduziu a suspeita e mudou sua posição em relação ao limiar.",
+      "O modelo não exige certeza absoluta.",
+      "Correta: reconhece a decisão e a incerteza residual."
+    ],
+    "tags": [
+      "Confundir risco baixo com impossibilidade",
+      "Exigir risco zero para utilidade",
+      "Exigir investigação até certeza",
+      "Aplicar limiar sem afirmar certeza"
+    ],
+    "focus": "Estude limiar de investigação e diferença entre risco baixo e risco zero."
+  },
+  {
+    "id": "Q116",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Decisão de intervir sob incerteza",
+    "secondary": [
+      "Decisão de intervir sob incerteza"
+    ],
+    "difficulty": "Básica",
+    "title": "Ultrapassar o limiar não significa certeza",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Em um modelo hipotético, uma intervenção pode ser considerada quando a probabilidade de doença ultrapassa 80%. Após um positivo, ela chega a 85%. Qual conclusão é adequada? Esse limiar é uma regra do exercício, não uma recomendação clínica universal.",
+    "options": [
+      "A doença está confirmada com certeza absoluta.",
+      "Não é possível decidir, porque a probabilidade é inferior a 100%.",
+      "O resultado ultrapassou o limiar de intervenção do modelo, embora ainda exista incerteza sobre o diagnóstico.",
+      "A probabilidade de não ter a doença é de 85%."
+    ],
+    "correct": 3,
+    "explain": "85% ultrapassa o limiar de 80%. Isso permite considerar a ação prevista no exercício, sem transformar a estimativa em certeza.",
+    "feedbackSteps": [
+      "Compare 85% com o limiar de 80%: o limite foi ultrapassado.",
+      "A probabilidade de ausência da doença é 100% − 85% = 15%.",
+      "Um limiar permite decidir sob incerteza; ele não confirma automaticamente a doença."
+    ],
+    "naturalExplanation": "Duas informações coexistem: a chance é suficiente para considerar a ação do modelo e ainda existe possibilidade de a doença estar ausente.",
+    "optionReasons": [
+      "85% não equivale a 100%.",
+      "O modelo permite considerar uma ação antes de atingir certeza.",
+      "Correta: separa o limiar de decisão da certeza diagnóstica.",
+      "A probabilidade de ausência é de 15%, o complemento."
+    ],
+    "tags": [
+      "Confundir limiar com certeza",
+      "Exigir certeza para agir",
+      "Distinguir ação de certeza diagnóstica",
+      "Inverter presença e ausência da doença"
+    ],
+    "focus": "Estude probabilidade posterior, limiares de ação e risco residual."
+  },
+  {
+    "id": "Q117",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Utilidade da informação diagnóstica",
+    "secondary": [
+      "Utilidade da informação diagnóstica"
+    ],
+    "difficulty": "Avançada",
+    "title": "O exame pode mudar a decisão?",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Em um modelo, probabilidades de 5% a 80%, inclusive, indicam investigação adicional. Uma pessoa está com probabilidade de 45%. Um exame levaria a 60% se positivo ou a 30% se negativo. Considerando apenas essas zonas de decisão, qual interpretação é correta? Os limiares são hipotéticos.",
+    "options": [
+      "O exame é incapaz de fornecer qualquer informação.",
+      "Ambos os resultados manteriam a pessoa na zona de investigação; é necessário avaliar se a informação modificaria os próximos passos e justificaria o exame.",
+      "Um resultado positivo levaria obrigatoriamente à intervenção.",
+      "Um resultado negativo permitiria encerrar a investigação."
+    ],
+    "correct": 2,
+    "explain": "O exame modifica a probabilidade, mas nenhum dos resultados ultrapassa os limiares. Sua utilidade depende também de como a informação orientaria os próximos passos.",
+    "feedbackSteps": [
+      "A zona de investigação vai de 5% a 80%.",
+      "Tanto 30% quanto 60% permanecem nela.",
+      "O exame fornece informação, mas não muda automaticamente a zona; pode ajudar a escolher outros passos, conforme o contexto."
+    ],
+    "naturalExplanation": "Uma situação de 60% é diferente de uma de 30%. Ainda assim, pelo modelo, ambas exigem investigação. Informação adicional e mudança imediata de conduta não são a mesma coisa.",
+    "optionReasons": [
+      "Atualizar a probabilidade é fornecer informação.",
+      "Correta: distingue informação diagnóstica de mudança imediata de zona.",
+      "60% não ultrapassa 80%.",
+      "30% não está abaixo de 5%."
+    ],
+    "tags": [
+      "Confundir ausência de mudança de zona com ausência de informação",
+      "Avaliar utilidade além da zona imediata",
+      "Aplicar incorretamente limiar de intervenção",
+      "Aplicar incorretamente limiar de exclusão"
+    ],
+    "focus": "Estude utilidade clínica do exame e diferença entre informação e mudança de decisão."
+  },
+  {
+    "id": "Q118",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Decisão compartilhada",
+    "secondary": [
+      "Decisão compartilhada"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Pessoas diferentes podem decidir de forma diferente",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Duas pessoas têm probabilidades semelhantes de doença e recebem as mesmas informações sobre um exame adicional. Uma considera o desconforto e os possíveis efeitos adversos muito relevantes. A outra prioriza reduzir a incerteza diagnóstica. Existem duas estratégias clinicamente aceitáveis. Qual abordagem é mais adequada?",
+    "options": [
+      "Determinar que ambas escolham a mesma estratégia porque a probabilidade é semelhante.",
+      "Apresentar somente a estratégia preferida pelo profissional.",
+      "Considerar que preferências pessoais não fazem parte da decisão.",
+      "Discutir benefícios, riscos e consequências de cada estratégia e incorporar as preferências de cada pessoa."
+    ],
+    "correct": 4,
+    "explain": "Quando existem opções clinicamente aceitáveis, a decisão deve considerar as evidências e aquilo que importa para a pessoa.",
+    "feedbackSteps": [
+      "Confirme que as opções são clinicamente aceitáveis.",
+      "Explique benefícios, riscos, consequências e incertezas.",
+      "Explore como cada pessoa valoriza essas consequências e construa a decisão em conjunto."
+    ],
+    "naturalExplanation": "Probabilidades semelhantes não significam que as pessoas valorizem todas as consequências da mesma forma. Uma pode aceitar desconforto para reduzir incerteza; outra pode preferir acompanhamento, quando isso é uma opção adequada.",
+    "optionReasons": [
+      "Ignora diferenças nas preferências.",
+      "Limita a compreensão das opções disponíveis.",
+      "As preferências são relevantes ao comparar opções aceitáveis.",
+      "Correta: combina evidências e prioridades individuais."
+    ],
+    "tags": [
+      "Impor mesma decisão por risco semelhante",
+      "Omitir opções aceitáveis",
+      "Excluir preferências da decisão",
+      "Integrar evidências e preferências"
+    ],
+    "focus": "Estude decisão compartilhada e diferença entre recomendar e impor uma escolha."
+  },
+  {
+    "id": "Q119",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Comunicação de benefício absoluto e relativo",
+    "secondary": [
+      "Comunicação de benefício absoluto e relativo"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Reduz pela metade é suficiente?",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Em um estudo hipotético, uma estratégia reduziu um desfecho de 4 para 2 casos por 1.000 pessoas ao longo de cinco anos. Qual apresentação comunica melhor a magnitude do benefício?",
+    "options": [
+      "Em cinco anos, ocorreram 4 casos por 1.000 pessoas sem a estratégia e 2 por 1.000 com ela: uma diferença de 2 casos por 1.000.",
+      "A estratégia evita o desfecho em metade de todas as pessoas.",
+      "A redução absoluta foi de 50 pontos percentuais.",
+      "A estratégia oferece 50% de chance individual de benefício."
+    ],
+    "correct": 1,
+    "explain": "A redução relativa foi de 50%, mas a absoluta foi de 2 casos por 1.000 pessoas em cinco anos.",
+    "feedbackSteps": [
+      "Redução relativa = (4 − 2)/4 = 50%.",
+      "Redução absoluta = 4 − 2 = 2 casos por 1.000.",
+      "O risco passou de 0,4% para 0,2%: diferença de 0,2 ponto percentual em cinco anos."
+    ],
+    "naturalExplanation": "Reduzir pela metade um evento que acontece quatro vezes em mil corresponde a duas ocorrências a menos em mil. O período e os riscos inicial e final ajudam a entender a magnitude.",
+    "optionReasons": [
+      "Correta: apresenta os riscos, a diferença e o período.",
+      "Metade dos eventos esperados não significa metade das pessoas.",
+      "50% é redução relativa; a diferença absoluta é 0,2 ponto percentual.",
+      "Redução relativa não corresponde a essa chance individual de benefício."
+    ],
+    "tags": [
+      "Comunicar risco absoluto com período",
+      "Confundir eventos evitados com metade das pessoas",
+      "Confundir redução relativa com pontos percentuais",
+      "Interpretar redução relativa como chance individual"
+    ],
+    "focus": "Estude risco absoluto, risco relativo e período de acompanhamento."
+  },
+  {
+    "id": "Q120",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Comunicação em frequências naturais",
+    "secondary": [
+      "Comunicação em frequências naturais"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Sensibilidade não responde à pergunta do paciente",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Em um cenário com 1.000 pessoas, um exame apresenta 80 verdadeiros positivos e 120 falsos positivos. Uma pessoa com positivo pergunta: Qual é a chance de eu realmente ter a doença? Considere que os dados se aplicam à situação. Qual resposta corresponde ao modelo?",
+    "options": [
+      "É de 80%, porque houve 80 verdadeiros positivos.",
+      "É de 12%, porque houve 120 falsos positivos.",
+      "Entre 200 pessoas com resultado positivo, 80 têm a doença: aproximadamente 40 em cada 100 positivos.",
+      "É de 8%, porque 80 das 1.000 pessoas foram verdadeiros positivos."
+    ],
+    "correct": 3,
+    "explain": "A pergunta exige o VPP: 80/(80 + 120) = 40%. O denominador é o total de resultados positivos.",
+    "feedbackSteps": [
+      "Depois de um positivo, olhe para o grupo dos positivos.",
+      "Nesse grupo, 80 têm a doença e 120 não têm: total de 200.",
+      "80/200 = 40%, ou 40 pessoas com a doença em cada 100 positivos semelhantes."
+    ],
+    "naturalExplanation": "A pergunta começa por quem recebeu positivo. Não usamos toda a população como denominador; usamos os 200 positivos.",
+    "optionReasons": [
+      "Uma contagem de 80 não significa 80%.",
+      "12% usa a população total e os falsos positivos, não responde à pergunta.",
+      "Correta: utiliza o grupo de referência adequado.",
+      "8% é a proporção de VP na população total, não entre os positivos."
+    ],
+    "tags": [
+      "Tratar contagem como percentual",
+      "Usar FP e população total para VPP",
+      "Comunicar VPP em frequências naturais",
+      "Usar população total como denominador"
+    ],
+    "focus": "Estude escolha do denominador e tradução do VPP em frequências naturais."
+  },
+  {
+    "id": "Q121",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Enquadramento da informação e complemento do VPN",
+    "secondary": [
+      "Enquadramento da informação e complemento do VPN"
+    ],
+    "difficulty": "Básica",
+    "title": "Duas frases, a mesma probabilidade",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Após um negativo, a probabilidade estimada de ausência da doença é de 97%. Qual comunicação apresenta corretamente os dois lados desse resultado?",
+    "options": [
+      "O exame excluiu a doença.",
+      "Entre 100 pessoas semelhantes com resultado negativo, aproximadamente 97 não têm a doença e 3 ainda têm.",
+      "A probabilidade de doença é de 97%.",
+      "O teste tem sensibilidade de 97%."
+    ],
+    "correct": 2,
+    "explain": "VPN de 97% corresponde a probabilidade residual de doença de 3% entre os negativos. São formas complementares de expressar o resultado.",
+    "feedbackSteps": [
+      "O grupo de referência é o das pessoas com negativo.",
+      "Nesse grupo: 97% sem doença + 3% com doença = 100%.",
+      "Apresentar os dois lados comunica a redução da suspeita e a incerteza restante."
+    ],
+    "naturalExplanation": "Em cem negativos semelhantes, esperamos aproximadamente 97 pessoas sem a doença e três com ela. O número é uma estimativa para pessoas semelhantes, não uma garantia individual.",
+    "optionReasons": [
+      "Omite a probabilidade residual de doença.",
+      "Correta: mostra os dois lados da estimativa.",
+      "Inverte ausência e presença da doença.",
+      "VPN e sensibilidade usam grupos de referência diferentes."
+    ],
+    "tags": [
+      "Tratar VPN alto como exclusão absoluta",
+      "Comunicar VPN e risco residual",
+      "Inverter VPN e doença após negativo",
+      "Confundir VPN com sensibilidade"
+    ],
+    "focus": "Estude VPN, probabilidade residual e comunicação equilibrada."
+  },
+  {
+    "id": "Q122",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Comunicação de cenários plausíveis",
+    "secondary": [
+      "Comunicação de cenários plausíveis"
+    ],
+    "difficulty": "Avançada",
+    "title": "Quando a probabilidade inicial é incerta",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "A probabilidade pré-teste não é conhecida com precisão. A equipe considera um intervalo inicial plausível e calcula que, após um positivo, a probabilidade pode variar entre 8% e 30%, conforme o valor inicial adotado. A faixa foi obtida simulando cenários, sem cálculo de intervalo de confiança. Como comunicar?",
+    "options": [
+      "A probabilidade exata é de 19%, o ponto médio da faixa.",
+      "Essa faixa é um intervalo de confiança de 95%.",
+      "Como existe incerteza, o resultado não fornece informação.",
+      "Nos cenários considerados, a probabilidade após o positivo varia de 8% a 30%; a faixa depende das estimativas iniciais e não é um intervalo de confiança."
+    ],
+    "correct": 4,
+    "explain": "A faixa representa cenários plausíveis. Não determina uma probabilidade exata nem constitui automaticamente um intervalo de confiança.",
+    "feedbackSteps": [
+      "A equipe variou a probabilidade inicial para construir cenários.",
+      "Cada cenário produz uma probabilidade posterior; os resultados vão de 8% a 30%.",
+      "Isso difere de calcular um intervalo de confiança por um procedimento estatístico. O ponto médio não se torna, automaticamente, uma estimativa individual validada."
+    ],
+    "naturalExplanation": "O cálculo pergunta o que acontece com uma suspeita inicial mais baixa ou mais alta. Ele não calculou uma distribuição estatística da incerteza nem autorizou chamar a faixa de intervalo de confiança.",
+    "optionReasons": [
+      "O ponto médio não é necessariamente uma estimativa adequada, muito menos exata.",
+      "O exercício não calculou intervalo de confiança de 95%.",
+      "O exame atualizou a probabilidade em cada cenário.",
+      "Correta: explica a origem e o significado da faixa."
+    ],
+    "tags": [
+      "Tratar ponto médio como probabilidade exata",
+      "Confundir faixa de cenários com intervalo de confiança",
+      "Confundir incerteza com ausência de informação",
+      "Comunicar corretamente faixa de cenários"
+    ],
+    "focus": "Diferencie análise de cenários, incerteza pré-teste e intervalo de confiança."
+  },
+  {
+    "id": "Q123",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Limites da informação disponível",
+    "secondary": [
+      "Limites da informação disponível"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Podemos informar o VPP sem a probabilidade inicial?",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Um teste tem sensibilidade de 95% e especificidade de 90%. Uma pessoa pergunta qual será a chance de doença se o resultado for positivo. Não há informação sobre prevalência em população semelhante nem estimativa de probabilidade pré-teste. Qual resposta é adequada?",
+    "options": [
+      "Não é possível fornecer uma probabilidade posterior única apenas com esses parâmetros; precisamos de uma estimativa pré-teste aplicável.",
+      "A probabilidade será de 95%, igual à sensibilidade.",
+      "A probabilidade será de 90%, igual à especificidade.",
+      "A probabilidade será de 92,5%, a média entre sensibilidade e especificidade."
+    ],
+    "correct": 1,
+    "explain": "Sensibilidade e especificidade não determinam, sozinhas, um VPP único. A interpretação do positivo depende também da probabilidade anterior ao exame.",
+    "feedbackSteps": [
+      "Sensibilidade considera doentes; especificidade considera não doentes.",
+      "Para reunir os positivos, precisamos saber a composição inicial desses dois grupos.",
+      "A mesma sensibilidade e especificidade podem produzir VPPs diferentes conforme a probabilidade pré-teste."
+    ],
+    "naturalExplanation": "Quando há poucos casos reais, os alarmes falsos podem ocupar uma parcela maior dos positivos. Não basta fazer uma média das duas medidas do exame.",
+    "optionReasons": [
+      "Correta: identifica a informação que falta.",
+      "Sensibilidade não é VPP.",
+      "Especificidade não é VPP.",
+      "A média dos parâmetros não calcula VPP."
+    ],
+    "tags": [
+      "Reconhecer necessidade de probabilidade pré-teste",
+      "Confundir sensibilidade com VPP",
+      "Confundir especificidade com VPP",
+      "Calcular VPP pela média dos parâmetros"
+    ],
+    "focus": "Estude o papel da probabilidade pré-teste na interpretação e comunicação."
+  },
+  {
+    "id": "Q124",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Consequências dos erros e contexto da decisão",
+    "secondary": [
+      "Consequências dos erros e contexto da decisão"
+    ],
+    "difficulty": "Avançada",
+    "title": "O mesmo risco residual sempre leva à mesma decisão?",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Após negativos, duas situações têm probabilidade residual de doença de 2%. Na primeira, perder o diagnóstico teria consequências potencialmente graves e o acompanhamento é difícil. Na segunda, as consequências são menores e há acompanhamento próximo. Os riscos e benefícios de investigar também são diferentes. Qual conclusão é adequada?",
+    "options": [
+      "Em ambos os casos, 2% exige encerrar a investigação.",
+      "A mesma probabilidade residual pode levar a decisões diferentes, porque consequências e possibilidades de acompanhamento também importam.",
+      "Em ambos os casos, qualquer probabilidade acima de zero exige investigação ilimitada.",
+      "O contexto só importa antes de realizar o exame."
+    ],
+    "correct": 2,
+    "explain": "A probabilidade informa a incerteza. A decisão também considera consequências dos erros, riscos da investigação e condições de acompanhamento.",
+    "feedbackSteps": [
+      "As duas situações têm o mesmo número: 2%.",
+      "As consequências e as opções disponíveis não são as mesmas.",
+      "Não há um limiar universal de 2%; decisões diferentes podem ser justificadas conforme benefícios, danos e acompanhamento."
+    ],
+    "naturalExplanation": "Qual é a chance de doença? e O que fazer diante dessa chance? são perguntas relacionadas, mas diferentes. Um risco residual pode ser aceitável em uma situação e exigir outra abordagem em outra.",
+    "optionReasons": [
+      "Trata 2% como limiar universal.",
+      "Correta: integra probabilidade e consequências.",
+      "Ignora riscos, custos e limites da investigação.",
+      "O contexto permanece relevante após o exame."
+    ],
+    "tags": [
+      "Aplicar limiar universal de 2%",
+      "Integrar risco e consequências",
+      "Exigir investigação ilimitada",
+      "Excluir contexto após o teste"
+    ],
+    "focus": "Estude consequências de falsos negativos e definição contextual dos limiares."
+  },
+  {
+    "id": "Q125",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Comunicação após triagem positiva",
+    "secondary": [
+      "Comunicação após triagem positiva"
+    ],
+    "difficulty": "Intermediária",
+    "title": "Alta acurácia não transforma um positivo em diagnóstico",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Em uma população hipotética de 10.000 pessoas, uma infecção tem prevalência de 1%. Um teste de triagem tem sensibilidade de 99% e especificidade de 99%. Uma pessoa recebe positivo. Considere esses parâmetros aplicáveis ao cenário. Qual explicação é mais adequada?",
+    "options": [
+      "Sua chance de infecção é de 99%, pois essa é a sensibilidade.",
+      "O resultado não importa, porque a prevalência é de apenas 1%.",
+      "Nesse cenário, aproximadamente metade dos positivos corresponde à infecção; o resultado precisa ser avaliado conforme a estratégia de confirmação.",
+      "O resultado confirma a infecção porque sensibilidade e especificidade são iguais."
+    ],
+    "correct": 3,
+    "explain": "O modelo produz 99 VP e 99 FP. O VPP é de 50%, apesar dos parâmetros elevados do teste.",
+    "feedbackSteps": [
+      "Há 100 pessoas infectadas e 9.900 não infectadas.",
+      "VP = 100 × 99% = 99; FP = 9.900 × 1% = 99.",
+      "VPP = 99/(99 + 99) = 50%. O positivo elevou a probabilidade de 1% para 50%, mas não forneceu certeza."
+    ],
+    "naturalExplanation": "O teste gera poucos alarmes falsos proporcionalmente, mas o grupo sem infecção é muito maior. Por isso, o número de alarmes falsos iguala o de casos reais entre os positivos.",
+    "optionReasons": [
+      "Confunde sensibilidade com VPP.",
+      "O positivo elevou a estimativa de 1% para 50%.",
+      "Correta: reconhece a relevância do resultado sem afirmar confirmação isolada.",
+      "Igualdade dos parâmetros não implica certeza diagnóstica."
+    ],
+    "tags": [
+      "Confundir sensibilidade com VPP",
+      "Ignorar atualização em baixa prevalência",
+      "Comunicar triagem positiva sem certeza",
+      "Usar igualdade dos parâmetros como confirmação"
+    ],
+    "focus": "Estude baixa prevalência, falsos positivos e diferença entre triagem e confirmação.",
+    "p": 1,
+    "s": 99,
+    "e": 99,
+    "n": 10000
+  },
+  {
+    "id": "Q126",
+    "version": 1,
+    "theme": "Decisão clínica e comunicação",
+    "area": "Decisão clínica e comunicação",
+    "subtheme": "Verificação da compreensão",
+    "secondary": [
+      "Verificação da compreensão"
+    ],
+    "difficulty": "Básica",
+    "title": "Como verificar se a explicação foi compreendida?",
+    "skill": "Interpretar resultados e comunicar decisões",
+    "text": "Após explicar que um negativo reduziu a probabilidade de doença para aproximadamente 3%, o profissional deseja verificar se a pessoa compreendeu o resultado e o plano de acompanhamento. Qual abordagem é mais adequada?",
+    "options": [
+      "Para eu conferir se expliquei com clareza, você pode me contar com suas palavras o que esse resultado significa e o que combinamos fazer depois?",
+      "Perguntar apenas Você entendeu? e encerrar a conversa após uma resposta afirmativa.",
+      "Repetir a explicação com mais termos técnicos, sem ouvir a pessoa.",
+      "Solicitar que a pessoa memorize as fórmulas de sensibilidade e especificidade."
+    ],
+    "correct": 1,
+    "explain": "Pedir uma explicação com as próprias palavras permite identificar dúvidas sobre o resultado e o plano. O objetivo é verificar a clareza da comunicação.",
+    "feedbackSteps": [
+      "Um sim isolado não demonstra compreensão completa.",
+      "Peça que a pessoa explique o resultado e os próximos passos com suas palavras, sem transformar isso em uma prova.",
+      "Se houver confusão, reformule a explicação e verifique novamente."
+    ],
+    "naturalExplanation": "Ao ouvir a pessoa, podemos descobrir que ela interpretou risco baixo como risco zero. A conversa deve verificar a compreensão tanto do número quanto do plano de acompanhamento.",
+    "optionReasons": [
+      "Correta: permite identificar e esclarecer dúvidas, responsabilizando o profissional pela clareza.",
+      "Uma resposta afirmativa oferece pouca informação sobre compreensão.",
+      "Mais termos técnicos podem aumentar a dificuldade.",
+      "Entender o resultado e o plano não exige memorizar fórmulas."
+    ],
+    "tags": [
+      "Verificar compreensão por explicação com próprias palavras",
+      "Confundir resposta afirmativa com compreensão",
+      "Aumentar complexidade sem escuta",
+      "Exigir memorização técnica do paciente"
+    ],
+    "focus": "Estude linguagem clara, escuta e verificação da compreensão."
+  }
+]);
 function personalSummaryHTML(activity){
  if(!activity?.finished)throw new Error('Finalize a atividade antes de exportar.');
  const right=activity.questions.filter(q=>activity.answers[q.id]===q.correct).length,missing=activity.questions.filter(q=>!activity.answers[q.id]).length,wrong=activity.questions.length-right-missing;
@@ -170,7 +1252,7 @@ function downloadPersonalSummary(){const blob=new Blob([personalSummaryHTML(sess
 function printPersonalSummary(){const report=personalSummaryHTML(session),popup=window.open('','_blank');if(!popup){$('summaryExportState').textContent='O navegador bloqueou a janela de impressão. Permita a abertura ou baixe o resumo e use Imprimir no navegador.';return;}popup.document.open();popup.document.write(report);popup.document.close();popup.focus();setTimeout(()=>{popup.print();},250);$('summaryExportState').textContent='Resumo aberto para impressão. Na janela de impressão, você também pode escolher Salvar como PDF.';}
 const profiles={curso:['Medicina','Enfermagem','Nutrição','Farmácia','Fisioterapia','Outro curso da saúde','Curso de outra área','Não iniciei graduação'],situacao_atual:['Cursando graduação','Graduação concluída','Graduação interrompida','Não curso/não concluí graduação','Outra situação'],periodo_atual:[...Array.from({length:12},(_,i)=>(i+1)+'º período'),'Acima do 12º','Organização anual/outro formato','Não sei informar'],preparacao_residencia:['Sim','Não','Não se aplica'],estudo_formal_testes_diagnosticos:['Nunca','Estou estudando atualmente','Já estudei']};
 const labels={curso:'Curso de graduação atual ou concluído',situacao_atual:'Situação atual',periodo_atual:'Período atual',preparacao_residencia:'Está se preparando para residência médica?',estudo_formal_testes_diagnosticos:'Já estudou testes diagnósticos formalmente?'};
-$('learn').innerHTML=`<div class="panel"><h2>Questões de testes diagnósticos</h2><p>Banco de 100 questões com cenários e parâmetros hipotéticos. O teste geral sorteia 10 questões sem repetição: 5 básicas, 3 intermediárias e 2 avançadas, distribuídas por seis eixos de conteúdo. No estudo por tema, são sorteadas até 10 questões do tema escolhido, conforme a quantidade disponível, com as dificuldades existentes nesse tema. A dificuldade é uma classificação pedagógica inicial, ainda não calibrada pelo desempenho dos alunos. A ordem das questões e das alternativas muda a cada nova atividade.</p><div id="quizSetup"><h3>Antes de começar</h3><p>Preencha os campos obrigatórios. Esta atividade registra automaticamente seu perfil e suas respostas para acompanhamento pedagógico pela docente. O envio é obrigatório ao finalizar. Não solicitamos nome, e-mail ou matrícula; os registros usam um código aleatório e ficam em uma planilha privada. Não inclua dados pessoais nos comentários.</p><form id="profileForm">${Object.keys(profiles).map(k=>`<div id="wrap_${k}"><label for="profile_${k}">${labels[k]} *</label><select id="profile_${k}" name="${k}" required style="max-width:100%;width:100%"><option value="">Selecione</option>${profiles[k].map(v=>`<option>${escapeHTML(v)}</option>`).join('')}</select></div>`).join('')}<label for="activityScope">Conteúdo da atividade</label><select id="activityScope" style="width:100%"><option value="general">Teste geral · sorteio equilibrado</option><option value="theme">Estudo por tema</option></select><div id="themeChoice" class="hidden"><label for="studyTheme">Tema que deseja estudar *</label><select id="studyTheme" style="width:100%" disabled><option value="">Selecione um tema</option>${[...new Set(bank.map(q=>q.theme))].sort((a,b)=>a.localeCompare(b,'pt-BR')).map(theme=>`<option value="${escapeHTML(theme)}">${escapeHTML(theme)} · ${bank.filter(q=>q.theme===theme).length} questão(ões)</option>`).join('')}</select><p id="themeCount" class="muted" aria-live="polite">Escolha um tema. A atividade terá até 10 questões sem repetição e gerará um novo registro na base privada.</p></div><label for="quizMode">Modo da atividade</label><select id="quizMode"><option value="study">Estudo · feedback após confirmar cada resposta</option><option value="exam">Simulado · correção ao finalizar</option></select><button type="submit" class="active">Iniciar atividade</button></form></div><div id="quizWork" class="hidden"></div><div id="quizSummary" class="hidden" aria-live="polite"></div></div><iframe name="epiclinReceiver" id="epiclinReceiver" title="Recebimento dos resultados" style="display:none"></iframe><form id="sendForm" method="POST" target="epiclinReceiver" style="display:none"><input type="hidden" name="payload" id="sendPayload"><input type="hidden" name="formato" value="html"></form>`;
+$('learn').innerHTML=`<div class="panel"><h2>Questões de testes diagnósticos</h2><p>Banco de 126 questões com cenários e parâmetros hipotéticos. O teste geral sorteia 10 questões sem repetição: 5 básicas, 3 intermediárias e 2 avançadas, distribuídas por seis eixos de conteúdo. No estudo por tema, são sorteadas até 10 questões do tema escolhido, conforme a quantidade disponível, com as dificuldades existentes nesse tema. A dificuldade é uma classificação pedagógica inicial, ainda não calibrada pelo desempenho dos alunos. A ordem das questões e das alternativas muda a cada nova atividade.</p><div id="quizSetup"><h3>Antes de começar</h3><p>Preencha os campos obrigatórios. Esta atividade registra automaticamente seu perfil e suas respostas para acompanhamento pedagógico pela docente. O envio é obrigatório ao finalizar. Não solicitamos nome, e-mail ou matrícula; os registros usam um código aleatório e ficam em uma planilha privada. Não inclua dados pessoais nos comentários.</p><form id="profileForm">${Object.keys(profiles).map(k=>`<div id="wrap_${k}"><label for="profile_${k}">${labels[k]} *</label><select id="profile_${k}" name="${k}" required style="max-width:100%;width:100%"><option value="">Selecione</option>${profiles[k].map(v=>`<option>${escapeHTML(v)}</option>`).join('')}</select></div>`).join('')}<label for="activityScope">Conteúdo da atividade</label><select id="activityScope" style="width:100%"><option value="general">Teste geral · sorteio equilibrado</option><option value="theme">Estudo por tema</option></select><div id="themeChoice" class="hidden"><label for="studyTheme">Tema que deseja estudar *</label><select id="studyTheme" style="width:100%" disabled><option value="">Selecione um tema</option>${[...new Set(bank.map(q=>q.theme))].sort((a,b)=>a.localeCompare(b,'pt-BR')).map(theme=>`<option value="${escapeHTML(theme)}">${escapeHTML(theme)} · ${bank.filter(q=>q.theme===theme).length} questão(ões)</option>`).join('')}</select><p id="themeCount" class="muted" aria-live="polite">Escolha um tema. A atividade terá até 10 questões sem repetição e gerará um novo registro na base privada.</p></div><label for="quizMode">Modo da atividade</label><select id="quizMode"><option value="study">Estudo · feedback após confirmar cada resposta</option><option value="exam">Simulado · correção ao finalizar</option></select><button type="submit" class="active">Iniciar atividade</button></form></div><div id="quizWork" class="hidden"></div><div id="quizSummary" class="hidden" aria-live="polite"></div></div><iframe name="epiclinReceiver" id="epiclinReceiver" title="Recebimento dos resultados" style="display:none"></iframe><form id="sendForm" method="POST" target="epiclinReceiver" style="display:none"><input type="hidden" name="payload" id="sendPayload"><input type="hidden" name="formato" value="html"></form>`;
 function periodVisibility(){let show=$('profile_situacao_atual').value==='Cursando graduação';$('wrap_periodo_atual').classList.toggle('hidden',!show);$('profile_periodo_atual').required=show;$('profile_periodo_atual').disabled=!show;if(!show)$('profile_periodo_atual').value=''}$('profile_situacao_atual').onchange=periodVisibility;periodVisibility();
 function selectThemeQuestions(theme){return shuffled(bank.filter(q=>q.theme===theme)).slice(0,10);}
 function themeVisibility(){const show=$('activityScope').value==='theme';$('themeChoice').classList.toggle('hidden',!show);$('studyTheme').disabled=!show;$('studyTheme').required=show;}
